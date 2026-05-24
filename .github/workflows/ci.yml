@@ -24,11 +24,31 @@ jobs:
           java-version: ${{ matrix.java }}
           cache: 'maven'
 
+      - name: Configure Git for version bumps
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        run: |
+          git config user.name "Version Bump"
+          git config user.email "version-bump@flossware.org"
+
+      - name: Auto-increment version
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        run: |
+          mvn -U build-helper:parse-version versions:set -DnewVersion=\${parsedVersion.majorVersion}.\${parsedVersion.nextMinorVersion} versions:commit
+
       - name: Build with Maven
         run: mvn -B clean verify
 
       - name: Run tests
         run: mvn -B test
+
+      - name: Commit and tag version
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        run: |
+          VERSION=$(mvn help:evaluate -Dexpression=project.version -q -DforceStdout)
+          git add pom.xml
+          git commit -m "Automated Version Bump ${VERSION} [ci skip]"
+          git tag "${VERSION}"
+          git push origin main --tags
 
       - name: Generate test report
         if: always()
