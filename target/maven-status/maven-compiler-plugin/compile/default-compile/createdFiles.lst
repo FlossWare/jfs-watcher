@@ -1,0 +1,5 @@
+org/flossware/jfswatcher/DeploymentWatcher.class
+org/flossware/jfswatcher/FileSystemDeploymentWatcher.class
+org/flossware/jfswatcher/DeploymentEventListener.class
+org/flossware/jfswatcher/WatcherConfig$Builder.class
+org/flossware/jfswatcher/WatcherConfig.class
