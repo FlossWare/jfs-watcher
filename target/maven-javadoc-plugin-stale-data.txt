@@ -1,0 +1,51 @@
+@options
+@packages
+-classpath
+'/home/sfloess/.m2/repository/org/slf4j/slf4j-api/2.0.9/slf4j-api-2.0.9.jar'
+-encoding
+'UTF-8'
+-protected
+-quiet
+--release
+21
+-sourcepath
+'/home/sfloess/Development/github/FlossWare/jfs-watcher/src/main/java:/home/sfloess/Development/github/FlossWare/jfs-watcher/target/generated-sources/annotations'
+-author
+-bottom
+'Copyright &#169; 2026. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'/home/sfloess/Development/github/FlossWare/jfs-watcher/target/apidocs'
+-docencoding
+'UTF-8'
+-Xdoclint:none
+-doctitle
+'JFS Watcher 1.0 API'
+-use
+-version
+-windowtitle
+'JFS Watcher 1.0 API'
+org.flossware.jfswatcher
+/home/sfloess/.m2/repository/org/slf4j/slf4j-api/2.0.9/slf4j-api-2.0.9.jar = 1693757672000
+/home/sfloess/Development/github/FlossWare/jfs-watcher/src/main/java = 1779600599059
+/home/sfloess/Development/github/FlossWare/jfs-watcher/target/generated-sources/annotations = 1779667864058
+/home/sfloess/Development/github/FlossWare/jfs-watcher/target/apidocs/element-list = 1779667922720
+/home/sfloess/Development/github/FlossWare/jfs-watcher/target/apidocs/overview-tree.html = 1779667922785
+/home/sfloess/Development/github/FlossWare/jfs-watcher/target/apidocs/allclasses-index.html = 1779667922830
+/home/sfloess/Development/github/FlossWare/jfs-watcher/target/apidocs/allpackages-index.html = 1779667922833
+/home/sfloess/Development/github/FlossWare/jfs-watcher/target/apidocs/module-search-index.js = 1779667922834
+/home/sfloess/Development/github/FlossWare/jfs-watcher/target/apidocs/package-search-index.js = 1779667922834
+/home/sfloess/Development/github/FlossWare/jfs-watcher/target/apidocs/type-search-index.js = 1779667922835
+/home/sfloess/Development/github/FlossWare/jfs-watcher/target/apidocs/member-search-index.js = 1779667922836
+/home/sfloess/Development/github/FlossWare/jfs-watcher/target/apidocs/tag-search-index.js = 1779667922836
+/home/sfloess/Development/github/FlossWare/jfs-watcher/target/apidocs/index-all.html = 1779667922857
+/home/sfloess/Development/github/FlossWare/jfs-watcher/target/apidocs/search.html = 1779667922860
+/home/sfloess/Development/github/FlossWare/jfs-watcher/target/apidocs/index.html = 1779667922862
+/home/sfloess/Development/github/FlossWare/jfs-watcher/target/apidocs/help-doc.html = 1779667922867
+/home/sfloess/Development/github/FlossWare/jfs-watcher/target/apidocs/stylesheet.css = 1779667922869
+/home/sfloess/Development/github/FlossWare/jfs-watcher/target/apidocs/script.js = 1779667922869
+/home/sfloess/Development/github/FlossWare/jfs-watcher/target/apidocs/copy.svg = 1779667922870
+/home/sfloess/Development/github/FlossWare/jfs-watcher/target/apidocs/link.svg = 1779667922872
+/home/sfloess/Development/github/FlossWare/jfs-watcher/target/apidocs/search.js = 1779667922873
+/home/sfloess/Development/github/FlossWare/jfs-watcher/target/apidocs/search-page.js = 1779667922875

@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>FileSystemDeploymentWatcher.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">JFS Watcher</a> &gt; <a href="index.source.html" class="el_package">org.flossware.jfswatcher</a> &gt; <span class="el_source">FileSystemDeploymentWatcher.java</span></div><h1>FileSystemDeploymentWatcher.java</h1><pre class="source lang-java linenums">package org.flossware.jfswatcher;
+
+import org.flossware.jfswatcher.DeploymentEventListener;
+import org.flossware.jfswatcher.DeploymentWatcher;
+import org.flossware.jfswatcher.WatcherConfig;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import java.io.IOException;
+import java.nio.file.*;
+import java.util.Map;
+import java.util.Set;
+import java.util.concurrent.*;
+
+import static java.nio.file.StandardWatchEventKinds.*;
+
+/**
+ * Filesystem-based implementation of DeploymentWatcher that monitors a directory
+ * for application descriptor files and triggers deployment events.
+ *
+ * &lt;p&gt;This implementation uses Java NIO's WatchService to efficiently monitor
+ * filesystem changes. It includes the following features:&lt;/p&gt;
+ * &lt;ul&gt;
+ *   &lt;li&gt;Thread-safe listener management using CopyOnWriteArrayList&lt;/li&gt;
+ *   &lt;li&gt;Debouncing of file changes to avoid processing rapid modifications&lt;/li&gt;
+ *   &lt;li&gt;File extension filtering based on WatcherConfig&lt;/li&gt;
+ *   &lt;li&gt;Dedicated thread for watching via ExecutorService&lt;/li&gt;
+ *   &lt;li&gt;Proper lifecycle management (start/stop/close)&lt;/li&gt;
+ * &lt;/ul&gt;
+ *
+ * &lt;p&gt;Example usage:&lt;/p&gt;
+ * &lt;pre&gt;{@code
+ * WatcherConfig config = WatcherConfig.builder()
+ *     .watchDirectory(Paths.get(&quot;/var/jplatform/apps&quot;))
+ *     .autoStart(true)
+ *     .autoDeploy(true)
+ *     .addFileExtension(&quot;yaml&quot;)
+ *     .addFileExtension(&quot;json&quot;)
+ *     .debounceMillis(500)
+ *     .build();
+ *
+ * DeploymentWatcher watcher = new FileSystemDeploymentWatcher(config);
+ * watcher.addListener(new AutoDeploymentHandler(applicationManager, parsers));
+ * watcher.start();
+ *
+ * // Later...
+ * watcher.stop();
+ * watcher.close();
+ * }&lt;/pre&gt;
+ *
+ * &lt;p&gt;File events are debounced to prevent duplicate processing when files are
+ * modified multiple times in quick succession (e.g., during a text editor save).
+ * The debounce delay is configurable via WatcherConfig.&lt;/p&gt;
+ *
+ * @see DeploymentWatcher
+ * @see WatcherConfig
+ * @see DeploymentEventListener
+ */
+public class FileSystemDeploymentWatcher implements DeploymentWatcher {
+
+<span class="fc" id="L61">    private static final Logger logger = LoggerFactory.getLogger(FileSystemDeploymentWatcher.class);</span>
+
+    private final WatcherConfig config;
+    private final CopyOnWriteArrayList&lt;DeploymentEventListener&gt; listeners;
+    private final Map&lt;Path, ScheduledFuture&lt;?&gt;&gt; pendingEvents;
+
+    private WatchService watchService;
+    private ExecutorService watcherExecutor;
+    private ScheduledExecutorService debounceScheduler;
+    private volatile boolean running;
+
+    /**
+     * Creates a new filesystem deployment watcher with the given configuration.
+     *
+     * @param config the watcher configuration
+     * @throws NullPointerException if config is null
+     */
+<span class="fc" id="L78">    public FileSystemDeploymentWatcher(WatcherConfig config) {</span>
+<span class="fc bfc" id="L79" title="All 2 branches covered.">        if (config == null) {</span>
+<span class="fc" id="L80">            throw new NullPointerException(&quot;config cannot be null&quot;);</span>
+        }
+<span class="fc" id="L82">        this.config = config;</span>
+<span class="fc" id="L83">        this.listeners = new CopyOnWriteArrayList&lt;&gt;();</span>
+<span class="fc" id="L84">        this.pendingEvents = new ConcurrentHashMap&lt;&gt;();</span>
+<span class="fc" id="L85">        this.running = false;</span>
+<span class="fc" id="L86">    }</span>
+
+    @Override
+    public void start() throws Exception {
+<span class="fc bfc" id="L90" title="All 2 branches covered.">        if (running) {</span>
+<span class="fc" id="L91">            logger.warn(&quot;Watcher is already running&quot;);</span>
+<span class="fc" id="L92">            return;</span>
+        }
+
+<span class="fc" id="L95">        Path watchDir = config.getWatchDirectory();</span>
+<span class="fc bfc" id="L96" title="All 2 branches covered.">        if (watchDir == null) {</span>
+<span class="fc" id="L97">            throw new IllegalStateException(&quot;Watch directory is not configured&quot;);</span>
+        }
+
+<span class="fc bfc" id="L100" title="All 2 branches covered.">        if (!Files.exists(watchDir)) {</span>
+<span class="fc" id="L101">            throw new IllegalStateException(&quot;Watch directory does not exist: &quot; + watchDir);</span>
+        }
+
+<span class="fc bfc" id="L104" title="All 2 branches covered.">        if (!Files.isDirectory(watchDir)) {</span>
+<span class="fc" id="L105">            throw new IllegalStateException(&quot;Watch path is not a directory: &quot; + watchDir);</span>
+        }
+
+<span class="fc" id="L108">        logger.info(&quot;Starting filesystem watcher on directory: {}&quot;, watchDir);</span>
+
+        try {
+            // Create watch service
+<span class="fc" id="L112">            watchService = FileSystems.getDefault().newWatchService();</span>
+
+            // Register directory
+<span class="fc" id="L115">            watchDir.register(</span>
+                watchService,
+                ENTRY_CREATE,
+                ENTRY_MODIFY,
+                ENTRY_DELETE
+            );
+
+            // Create thread pools
+<span class="fc" id="L123">            watcherExecutor = Executors.newSingleThreadExecutor(r -&gt; {</span>
+<span class="fc" id="L124">                Thread t = new Thread(r, &quot;fs-watcher&quot;);</span>
+<span class="fc" id="L125">                t.setDaemon(true);</span>
+<span class="fc" id="L126">                return t;</span>
+            });
+
+<span class="fc" id="L129">            debounceScheduler = Executors.newScheduledThreadPool(2, r -&gt; {</span>
+<span class="fc" id="L130">                Thread t = new Thread(r, &quot;fs-watcher-debounce&quot;);</span>
+<span class="fc" id="L131">                t.setDaemon(true);</span>
+<span class="fc" id="L132">                return t;</span>
+            });
+
+            // Start watching
+<span class="fc" id="L136">            running = true;</span>
+<span class="fc" id="L137">            watcherExecutor.submit(this::watchLoop);</span>
+
+<span class="fc" id="L139">            logger.info(&quot;Filesystem watcher started successfully&quot;);</span>
+
+            // Scan existing files
+<span class="fc" id="L142">            scanExistingFiles(watchDir);</span>
+
+<span class="nc" id="L144">        } catch (Exception e) {</span>
+<span class="nc" id="L145">            logger.error(&quot;Failed to start filesystem watcher&quot;, e);</span>
+<span class="nc" id="L146">            cleanup();</span>
+<span class="nc" id="L147">            throw e;</span>
+<span class="fc" id="L148">        }</span>
+<span class="fc" id="L149">    }</span>
+
+    @Override
+    public void stop() throws Exception {
+<span class="fc bfc" id="L153" title="All 2 branches covered.">        if (!running) {</span>
+<span class="fc" id="L154">            logger.warn(&quot;Watcher is not running&quot;);</span>
+<span class="fc" id="L155">            return;</span>
+        }
+
+<span class="fc" id="L158">        logger.info(&quot;Stopping filesystem watcher&quot;);</span>
+<span class="fc" id="L159">        running = false;</span>
+
+<span class="fc" id="L161">        cleanup();</span>
+
+<span class="fc" id="L163">        logger.info(&quot;Filesystem watcher stopped&quot;);</span>
+<span class="fc" id="L164">    }</span>
+
+    @Override
+    public void close() throws Exception {
+<span class="fc" id="L168">        stop();</span>
+<span class="fc" id="L169">    }</span>
+
+    @Override
+    public void addListener(DeploymentEventListener listener) {
+<span class="fc bfc" id="L173" title="All 2 branches covered.">        if (listener == null) {</span>
+<span class="fc" id="L174">            throw new NullPointerException(&quot;listener cannot be null&quot;);</span>
+        }
+<span class="fc" id="L176">        listeners.add(listener);</span>
+<span class="fc" id="L177">        logger.debug(&quot;Added deployment listener: {}&quot;, listener.getClass().getName());</span>
+<span class="fc" id="L178">    }</span>
+
+    @Override
+    public void removeListener(DeploymentEventListener listener) {
+<span class="fc bfc" id="L182" title="All 2 branches covered.">        if (listener == null) {</span>
+<span class="fc" id="L183">            throw new NullPointerException(&quot;listener cannot be null&quot;);</span>
+        }
+<span class="fc" id="L185">        listeners.remove(listener);</span>
+<span class="fc" id="L186">        logger.debug(&quot;Removed deployment listener: {}&quot;, listener.getClass().getName());</span>
+<span class="fc" id="L187">    }</span>
+
+    @Override
+    public boolean isRunning() {
+<span class="fc" id="L191">        return running;</span>
+    }
+
+    /**
+     * Main watch loop that processes filesystem events.
+     */
+    private void watchLoop() {
+<span class="fc" id="L198">        logger.debug(&quot;Watch loop started&quot;);</span>
+
+<span class="pc bpc" id="L200" title="1 of 2 branches missed.">        while (running) {</span>
+            WatchKey key;
+            try {
+                // Wait for events (blocks until event or interrupt)
+<span class="fc" id="L204">                key = watchService.poll(1, TimeUnit.SECONDS);</span>
+<span class="fc bfc" id="L205" title="All 2 branches covered.">                if (key == null) {</span>
+<span class="fc" id="L206">                    continue;</span>
+                }
+<span class="fc" id="L208">            } catch (InterruptedException e) {</span>
+<span class="fc" id="L209">                logger.debug(&quot;Watch loop interrupted&quot;);</span>
+<span class="fc" id="L210">                Thread.currentThread().interrupt();</span>
+<span class="fc" id="L211">                break;</span>
+<span class="nc" id="L212">            } catch (ClosedWatchServiceException e) {</span>
+<span class="nc" id="L213">                logger.debug(&quot;Watch service closed&quot;);</span>
+<span class="nc" id="L214">                break;</span>
+<span class="fc" id="L215">            }</span>
+
+            // Process events
+<span class="fc bfc" id="L218" title="All 2 branches covered.">            for (WatchEvent&lt;?&gt; event : key.pollEvents()) {</span>
+<span class="fc" id="L219">                WatchEvent.Kind&lt;?&gt; kind = event.kind();</span>
+
+                // Handle overflow
+<span class="pc bpc" id="L222" title="1 of 2 branches missed.">                if (kind == StandardWatchEventKinds.OVERFLOW) {</span>
+<span class="nc" id="L223">                    logger.warn(&quot;Watch event overflow - some events may have been lost&quot;);</span>
+<span class="nc" id="L224">                    continue;</span>
+                }
+
+                // Get the filename
+                @SuppressWarnings(&quot;unchecked&quot;)
+<span class="fc" id="L229">                WatchEvent&lt;Path&gt; pathEvent = (WatchEvent&lt;Path&gt;) event;</span>
+<span class="fc" id="L230">                Path filename = pathEvent.context();</span>
+<span class="fc" id="L231">                Path fullPath = config.getWatchDirectory().resolve(filename);</span>
+
+                // Filter by extension
+<span class="fc bfc" id="L234" title="All 2 branches covered.">                if (!matchesExtension(filename)) {</span>
+<span class="fc" id="L235">                    logger.trace(&quot;Ignoring file (extension mismatch): {}&quot;, filename);</span>
+<span class="fc" id="L236">                    continue;</span>
+                }
+
+<span class="fc" id="L239">                logger.debug(&quot;Detected {} event for: {}&quot;, kind.name(), filename);</span>
+
+                // Schedule debounced event
+<span class="fc bfc" id="L242" title="All 2 branches covered.">                if (kind == ENTRY_CREATE) {</span>
+<span class="fc" id="L243">                    scheduleEvent(fullPath, () -&gt; notifyDescriptorDetected(fullPath));</span>
+<span class="fc bfc" id="L244" title="All 2 branches covered.">                } else if (kind == ENTRY_MODIFY) {</span>
+<span class="fc" id="L245">                    scheduleEvent(fullPath, () -&gt; notifyDescriptorModified(fullPath));</span>
+<span class="pc bpc" id="L246" title="1 of 2 branches missed.">                } else if (kind == ENTRY_DELETE) {</span>
+<span class="fc" id="L247">                    scheduleEvent(fullPath, () -&gt; notifyDescriptorRemoved(fullPath));</span>
+                }
+<span class="fc" id="L249">            }</span>
+
+            // Reset the key
+<span class="fc" id="L252">            boolean valid = key.reset();</span>
+<span class="pc bpc" id="L253" title="1 of 2 branches missed.">            if (!valid) {</span>
+<span class="nc" id="L254">                logger.error(&quot;Watch key is no longer valid - stopping watcher&quot;);</span>
+<span class="nc" id="L255">                running = false;</span>
+<span class="nc" id="L256">                break;</span>
+            }
+<span class="fc" id="L258">        }</span>
+
+<span class="fc" id="L260">        logger.debug(&quot;Watch loop exited&quot;);</span>
+<span class="fc" id="L261">    }</span>
+
+    /**
+     * Schedules a debounced event for a file.
+     * If a pending event exists for the file, it is cancelled and replaced.
+     *
+     * @param file the file path
+     * @param action the action to execute after the debounce delay
+     */
+    private void scheduleEvent(Path file, Runnable action) {
+        // Cancel existing pending event
+<span class="fc" id="L272">        ScheduledFuture&lt;?&gt; existing = pendingEvents.remove(file);</span>
+<span class="fc bfc" id="L273" title="All 2 branches covered.">        if (existing != null) {</span>
+<span class="fc" id="L274">            existing.cancel(false);</span>
+<span class="fc" id="L275">            logger.trace(&quot;Cancelled pending event for: {}&quot;, file);</span>
+        }
+
+        // Schedule new event
+<span class="fc" id="L279">        long debounceMillis = config.getDebounceMillis();</span>
+<span class="fc" id="L280">        ScheduledFuture&lt;?&gt; future = debounceScheduler.schedule(() -&gt; {</span>
+<span class="fc" id="L281">            pendingEvents.remove(file);</span>
+<span class="fc" id="L282">            action.run();</span>
+<span class="fc" id="L283">        }, debounceMillis, TimeUnit.MILLISECONDS);</span>
+
+<span class="fc" id="L285">        pendingEvents.put(file, future);</span>
+<span class="fc" id="L286">        logger.trace(&quot;Scheduled debounced event for: {} (delay: {}ms)&quot;, file, debounceMillis);</span>
+<span class="fc" id="L287">    }</span>
+
+    /**
+     * Scans the watch directory for existing files and notifies listeners.
+     *
+     * @param watchDir the directory to scan
+     */
+    private void scanExistingFiles(Path watchDir) {
+<span class="fc" id="L295">        logger.debug(&quot;Scanning for existing descriptor files&quot;);</span>
+
+<span class="fc" id="L297">        try (DirectoryStream&lt;Path&gt; stream = Files.newDirectoryStream(watchDir)) {</span>
+<span class="fc bfc" id="L298" title="All 2 branches covered.">            for (Path file : stream) {</span>
+<span class="pc bpc" id="L299" title="2 of 4 branches missed.">                if (Files.isRegularFile(file) &amp;&amp; matchesExtension(file.getFileName())) {</span>
+<span class="fc" id="L300">                    logger.debug(&quot;Found existing descriptor: {}&quot;, file);</span>
+<span class="fc" id="L301">                    scheduleEvent(file, () -&gt; notifyDescriptorDetected(file));</span>
+                }
+<span class="fc" id="L303">            }</span>
+<span class="nc" id="L304">        } catch (IOException e) {</span>
+<span class="nc" id="L305">            logger.error(&quot;Failed to scan existing files&quot;, e);</span>
+<span class="fc" id="L306">        }</span>
+<span class="fc" id="L307">    }</span>
+
+    /**
+     * Checks if a filename matches the configured file extensions.
+     *
+     * @param filename the filename to check
+     * @return true if the file extension matches, false otherwise
+     */
+    private boolean matchesExtension(Path filename) {
+<span class="fc" id="L316">        String name = filename.toString().toLowerCase();</span>
+<span class="fc" id="L317">        Set&lt;String&gt; extensions = config.getFileExtensions();</span>
+
+<span class="fc bfc" id="L319" title="All 2 branches covered.">        for (String ext : extensions) {</span>
+<span class="fc bfc" id="L320" title="All 2 branches covered.">            if (name.endsWith(&quot;.&quot; + ext.toLowerCase())) {</span>
+<span class="fc" id="L321">                return true;</span>
+            }
+<span class="fc" id="L323">        }</span>
+
+<span class="fc" id="L325">        return false;</span>
+    }
+
+    /**
+     * Notifies all listeners that a descriptor was detected.
+     *
+     * @param descriptorFile the descriptor file path
+     */
+    private void notifyDescriptorDetected(Path descriptorFile) {
+<span class="fc" id="L334">        logger.debug(&quot;Notifying listeners: descriptor detected - {}&quot;, descriptorFile);</span>
+<span class="fc bfc" id="L335" title="All 2 branches covered.">        for (DeploymentEventListener listener : listeners) {</span>
+            try {
+<span class="fc" id="L337">                listener.onDescriptorDetected(descriptorFile);</span>
+<span class="fc" id="L338">            } catch (Exception e) {</span>
+<span class="fc" id="L339">                logger.error(&quot;Listener threw exception on descriptor detected&quot;, e);</span>
+<span class="fc" id="L340">                notifyError(descriptorFile, e, listener);</span>
+<span class="fc" id="L341">            }</span>
+<span class="fc" id="L342">        }</span>
+<span class="fc" id="L343">    }</span>
+
+    /**
+     * Notifies all listeners that a descriptor was modified.
+     *
+     * @param descriptorFile the descriptor file path
+     */
+    private void notifyDescriptorModified(Path descriptorFile) {
+<span class="fc" id="L351">        logger.debug(&quot;Notifying listeners: descriptor modified - {}&quot;, descriptorFile);</span>
+<span class="fc bfc" id="L352" title="All 2 branches covered.">        for (DeploymentEventListener listener : listeners) {</span>
+            try {
+<span class="fc" id="L354">                listener.onDescriptorModified(descriptorFile);</span>
+<span class="fc" id="L355">            } catch (Exception e) {</span>
+<span class="fc" id="L356">                logger.error(&quot;Listener threw exception on descriptor modified&quot;, e);</span>
+<span class="fc" id="L357">                notifyError(descriptorFile, e, listener);</span>
+<span class="fc" id="L358">            }</span>
+<span class="fc" id="L359">        }</span>
+<span class="fc" id="L360">    }</span>
+
+    /**
+     * Notifies all listeners that a descriptor was removed.
+     *
+     * @param descriptorFile the descriptor file path
+     */
+    private void notifyDescriptorRemoved(Path descriptorFile) {
+<span class="fc" id="L368">        logger.debug(&quot;Notifying listeners: descriptor removed - {}&quot;, descriptorFile);</span>
+<span class="fc bfc" id="L369" title="All 2 branches covered.">        for (DeploymentEventListener listener : listeners) {</span>
+            try {
+<span class="fc" id="L371">                listener.onDescriptorRemoved(descriptorFile);</span>
+<span class="fc" id="L372">            } catch (Exception e) {</span>
+<span class="fc" id="L373">                logger.error(&quot;Listener threw exception on descriptor removed&quot;, e);</span>
+<span class="fc" id="L374">                notifyError(descriptorFile, e, listener);</span>
+<span class="fc" id="L375">            }</span>
+<span class="fc" id="L376">        }</span>
+<span class="fc" id="L377">    }</span>
+
+    /**
+     * Notifies a specific listener about an error.
+     *
+     * @param file the file that caused the error
+     * @param error the error that occurred
+     * @param listener the listener to notify
+     */
+    private void notifyError(Path file, Exception error, DeploymentEventListener listener) {
+        try {
+<span class="fc" id="L388">            listener.onError(file, error);</span>
+<span class="nc" id="L389">        } catch (Exception e) {</span>
+<span class="nc" id="L390">            logger.error(&quot;Listener threw exception in onError handler&quot;, e);</span>
+<span class="fc" id="L391">        }</span>
+<span class="fc" id="L392">    }</span>
+
+    /**
+     * Cleans up resources.
+     */
+    private void cleanup() {
+        // Cancel all pending events
+<span class="pc bpc" id="L399" title="1 of 2 branches missed.">        for (ScheduledFuture&lt;?&gt; future : pendingEvents.values()) {</span>
+<span class="nc" id="L400">            future.cancel(false);</span>
+<span class="nc" id="L401">        }</span>
+<span class="fc" id="L402">        pendingEvents.clear();</span>
+
+        // Shutdown thread pools
+<span class="pc bpc" id="L405" title="1 of 2 branches missed.">        if (debounceScheduler != null) {</span>
+<span class="fc" id="L406">            debounceScheduler.shutdownNow();</span>
+            try {
+<span class="fc" id="L408">                debounceScheduler.awaitTermination(5, TimeUnit.SECONDS);</span>
+<span class="nc" id="L409">            } catch (InterruptedException e) {</span>
+<span class="nc" id="L410">                Thread.currentThread().interrupt();</span>
+<span class="fc" id="L411">            }</span>
+        }
+
+<span class="pc bpc" id="L414" title="1 of 2 branches missed.">        if (watcherExecutor != null) {</span>
+<span class="fc" id="L415">            watcherExecutor.shutdownNow();</span>
+            try {
+<span class="fc" id="L417">                watcherExecutor.awaitTermination(5, TimeUnit.SECONDS);</span>
+<span class="nc" id="L418">            } catch (InterruptedException e) {</span>
+<span class="nc" id="L419">                Thread.currentThread().interrupt();</span>
+<span class="fc" id="L420">            }</span>
+        }
+
+        // Close watch service
+<span class="pc bpc" id="L424" title="1 of 2 branches missed.">        if (watchService != null) {</span>
+            try {
+<span class="fc" id="L426">                watchService.close();</span>
+<span class="nc" id="L427">            } catch (IOException e) {</span>
+<span class="nc" id="L428">                logger.error(&quot;Error closing watch service&quot;, e);</span>
+<span class="fc" id="L429">            }</span>
+        }
+<span class="fc" id="L431">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.10.202304240956</span></div></body></html>

@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: org.flossware.jfswatcher.FileSystemDeploymentWatcherEdgeCasesTest
+-------------------------------------------------------------------------------
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.979 s -- in org.flossware.jfswatcher.FileSystemDeploymentWatcherEdgeCasesTest
