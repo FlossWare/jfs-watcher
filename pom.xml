@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.flossware</groupId>
   <artifactId>fs-watcher-java</artifactId>
-  <version>2.0</version>
+  <version>1.0</version>
   <packaging>jar</packaging>
   <name>FlossWare Fs Watcher</name>
   <description>Filesystem watcher for monitoring directory changes with debouncing</description>
