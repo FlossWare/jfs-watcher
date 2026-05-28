@@ -1,4 +1,4 @@
-package org.flossware.jfswatcher;
+package org.flossware.fswatcher;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.DisplayName;

@@ -396,9 +396,9 @@ public class FileSystemDeploymentWatcher implements DeploymentWatcher {
      */
     private void cleanup() {
         // Cancel all pending events
-<span class="pc bpc" id="L399" title="1 of 2 branches missed.">        for (ScheduledFuture&lt;?&gt; future : pendingEvents.values()) {</span>
-<span class="nc" id="L400">            future.cancel(false);</span>
-<span class="nc" id="L401">        }</span>
+<span class="fc bfc" id="L399" title="All 2 branches covered.">        for (ScheduledFuture&lt;?&gt; future : pendingEvents.values()) {</span>
+<span class="fc" id="L400">            future.cancel(false);</span>
+<span class="fc" id="L401">        }</span>
 <span class="fc" id="L402">        pendingEvents.clear();</span>
 
         // Shutdown thread pools
@@ -430,4 +430,4 @@ public class FileSystemDeploymentWatcher implements DeploymentWatcher {
         }
 <span class="fc" id="L431">    }</span>
 }
-</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.10.202304240956</span></div></body></html>
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

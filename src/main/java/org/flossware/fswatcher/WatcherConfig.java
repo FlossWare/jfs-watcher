@@ -1,4 +1,4 @@
-package org.flossware.jfswatcher;
+package org.flossware.fswatcher;
 
 import java.nio.file.Path;
 import java.util.Collections;

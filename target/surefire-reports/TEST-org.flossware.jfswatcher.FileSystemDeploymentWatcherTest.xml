@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="org.flossware.jfswatcher.FileSystemDeploymentWatcherTest" time="2.643" tests="21" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="org.flossware.jfswatcher.FileSystemDeploymentWatcherTest" time="2.639" tests="21" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -13,7 +13,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="US"/>
     <property name="sun.boot.library.path" value="/home/sfloess/.sdkman/candidates/java/21.0.11-tem/lib"/>
-    <property name="sun.java.command" value="/home/sfloess/Development/github/FlossWare/jfs-watcher/target/surefire/surefirebooter-20260524191147504_3.jar /home/sfloess/Development/github/FlossWare/jfs-watcher/target/surefire 2026-05-24T19-11-47_373-jvmRun1 surefire-20260524191147504_1tmp surefire_0-20260524191147504_2tmp"/>
+    <property name="sun.java.command" value="/home/sfloess/Development/github/FlossWare/jfs-watcher/target/surefire/surefirebooter-20260526175349410_3.jar /home/sfloess/Development/github/FlossWare/jfs-watcher/target/surefire 2026-05-26T17-53-49_288-jvmRun1 surefire-20260526175349410_1tmp surefire_0-20260526175349410_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/home/sfloess/Development/github/FlossWare/jfs-watcher/target/test-classes:/home/sfloess/Development/github/FlossWare/jfs-watcher/target/classes:/home/sfloess/.m2/repository/org/slf4j/slf4j-api/2.0.9/slf4j-api-2.0.9.jar:/home/sfloess/.m2/repository/org/junit/jupiter/junit-jupiter/6.1.0/junit-jupiter-6.1.0.jar:/home/sfloess/.m2/repository/org/junit/jupiter/junit-jupiter-api/6.1.0/junit-jupiter-api-6.1.0.jar:/home/sfloess/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/home/sfloess/.m2/repository/org/junit/platform/junit-platform-commons/6.1.0/junit-platform-commons-6.1.0.jar:/home/sfloess/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/home/sfloess/.m2/repository/org/jspecify/jspecify/1.0.0/jspecify-1.0.0.jar:/home/sfloess/.m2/repository/org/junit/jupiter/junit-jupiter-params/6.1.0/junit-jupiter-params-6.1.0.jar:/home/sfloess/.m2/repository/org/junit/jupiter/junit-jupiter-engine/6.1.0/junit-jupiter-engine-6.1.0.jar:/home/sfloess/.m2/repository/org/junit/platform/junit-platform-engine/6.1.0/junit-platform-engine-6.1.0.jar:/home/sfloess/.m2/repository/ch/qos/logback/logback-classic/1.4.11/logback-classic-1.4.11.jar:/home/sfloess/.m2/repository/ch/qos/logback/logback-core/1.4.11/logback-core-1.4.11.jar:"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -28,7 +28,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
-    <property name="surefire.real.class.path" value="/home/sfloess/Development/github/FlossWare/jfs-watcher/target/surefire/surefirebooter-20260524191147504_3.jar"/>
+    <property name="surefire.real.class.path" value="/home/sfloess/Development/github/FlossWare/jfs-watcher/target/surefire/surefirebooter-20260526175349410_3.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="21.0.11+10-LTS"/>
     <property name="user.name" value="sfloess"/>
@@ -55,179 +55,179 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="65.0"/>
   </properties>
-  <testcase name="testRemoveNullListener" classname="org.flossware.jfswatcher.FileSystemDeploymentWatcherTest" time="0.005"/>
-  <testcase name="testRemoveListener" classname="org.flossware.jfswatcher.FileSystemDeploymentWatcherTest" time="0.003">
-    <system-out><![CDATA[19:11:56.246 [main] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Added deployment listener: org.flossware.jfswatcher.FileSystemDeploymentWatcherTest$TestListener
-19:11:56.246 [main] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Removed deployment listener: org.flossware.jfswatcher.FileSystemDeploymentWatcherTest$TestListener
+  <testcase name="testRemoveNullListener" classname="org.flossware.jfswatcher.FileSystemDeploymentWatcherTest" time="0.007"/>
+  <testcase name="testRemoveListener" classname="org.flossware.jfswatcher.FileSystemDeploymentWatcherTest" time="0.004">
+    <system-out><![CDATA[17:53:58.645 [main] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Added deployment listener: org.flossware.jfswatcher.FileSystemDeploymentWatcherTest$TestListener
+17:53:58.645 [main] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Removed deployment listener: org.flossware.jfswatcher.FileSystemDeploymentWatcherTest$TestListener
 ]]></system-out>
   </testcase>
-  <testcase name="testDetectNewFile" classname="org.flossware.jfswatcher.FileSystemDeploymentWatcherTest" time="0.113">
-    <system-out><![CDATA[19:11:56.250 [main] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Added deployment listener: org.flossware.jfswatcher.FileSystemDeploymentWatcherTest$1
-19:11:56.250 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Starting filesystem watcher on directory: /tmp/junit-9277947717325151185
-19:11:56.251 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Filesystem watcher started successfully
-19:11:56.251 [main] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Scanning for existing descriptor files
-19:11:56.251 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Watch loop started
-19:11:56.252 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: app.yaml
-19:11:56.252 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: app.yaml
-19:11:56.352 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-9277947717325151185/app.yaml
-19:11:56.355 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Stopping filesystem watcher
-19:11:56.355 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Watch loop interrupted
-19:11:56.355 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Watch loop exited
-19:11:56.359 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Filesystem watcher stopped
+  <testcase name="testDetectNewFile" classname="org.flossware.jfswatcher.FileSystemDeploymentWatcherTest" time="0.115">
+    <system-out><![CDATA[17:53:58.650 [main] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Added deployment listener: org.flossware.jfswatcher.FileSystemDeploymentWatcherTest$1
+17:53:58.651 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Starting filesystem watcher on directory: /tmp/junit-9693121058940793251
+17:53:58.652 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Filesystem watcher started successfully
+17:53:58.652 [main] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Scanning for existing descriptor files
+17:53:58.652 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Watch loop started
+17:53:58.653 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: app.yaml
+17:53:58.653 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: app.yaml
+17:53:58.754 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-9693121058940793251/app.yaml
+17:53:58.756 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Stopping filesystem watcher
+17:53:58.756 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Watch loop interrupted
+17:53:58.756 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Watch loop exited
+17:53:58.760 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Filesystem watcher stopped
 ]]></system-out>
   </testcase>
   <testcase name="testClose" classname="org.flossware.jfswatcher.FileSystemDeploymentWatcherTest" time="0.008">
-    <system-out><![CDATA[19:11:56.363 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Starting filesystem watcher on directory: /tmp/junit-8635687307201010585
-19:11:56.364 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Filesystem watcher started successfully
-19:11:56.365 [main] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Scanning for existing descriptor files
-19:11:56.365 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Watch loop started
-19:11:56.365 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Stopping filesystem watcher
-19:11:56.365 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Watch loop interrupted
-19:11:56.365 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Watch loop exited
-19:11:56.369 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Filesystem watcher stopped
+    <system-out><![CDATA[17:53:58.764 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Starting filesystem watcher on directory: /tmp/junit-18165950102144383948
+17:53:58.765 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Filesystem watcher started successfully
+17:53:58.765 [main] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Scanning for existing descriptor files
+17:53:58.765 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Watch loop started
+17:53:58.765 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Stopping filesystem watcher
+17:53:58.765 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Watch loop interrupted
+17:53:58.765 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Watch loop exited
+17:53:58.770 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Filesystem watcher stopped
 ]]></system-out>
   </testcase>
-  <testcase name="testMultipleListeners" classname="org.flossware.jfswatcher.FileSystemDeploymentWatcherTest" time="0.115">
-    <system-out><![CDATA[19:11:56.374 [main] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Added deployment listener: org.flossware.jfswatcher.FileSystemDeploymentWatcherTest$6
-19:11:56.375 [main] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Added deployment listener: org.flossware.jfswatcher.FileSystemDeploymentWatcherTest$7
-19:11:56.375 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Starting filesystem watcher on directory: /tmp/junit-16847903368604507862
-19:11:56.376 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Filesystem watcher started successfully
-19:11:56.376 [main] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Scanning for existing descriptor files
-19:11:56.376 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Watch loop started
-19:11:56.376 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: app.yaml
-19:11:56.377 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: app.yaml
-19:11:56.477 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-16847903368604507862/app.yaml
-19:11:56.478 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Stopping filesystem watcher
-19:11:56.479 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Watch loop interrupted
-19:11:56.479 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Watch loop exited
-19:11:56.484 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Filesystem watcher stopped
+  <testcase name="testMultipleListeners" classname="org.flossware.jfswatcher.FileSystemDeploymentWatcherTest" time="0.113">
+    <system-out><![CDATA[17:53:58.775 [main] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Added deployment listener: org.flossware.jfswatcher.FileSystemDeploymentWatcherTest$6
+17:53:58.775 [main] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Added deployment listener: org.flossware.jfswatcher.FileSystemDeploymentWatcherTest$7
+17:53:58.775 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Starting filesystem watcher on directory: /tmp/junit-16578077281462701243
+17:53:58.776 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Filesystem watcher started successfully
+17:53:58.776 [main] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Scanning for existing descriptor files
+17:53:58.776 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Watch loop started
+17:53:58.777 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: app.yaml
+17:53:58.777 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: app.yaml
+17:53:58.878 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-16578077281462701243/app.yaml
+17:53:58.878 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Stopping filesystem watcher
+17:53:58.879 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Watch loop interrupted
+17:53:58.879 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Watch loop exited
+17:53:58.883 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Filesystem watcher stopped
 ]]></system-out>
   </testcase>
-  <testcase name="testStop" classname="org.flossware.jfswatcher.FileSystemDeploymentWatcherTest" time="0.008">
-    <system-out><![CDATA[19:11:56.488 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Starting filesystem watcher on directory: /tmp/junit-10137667788247455356
-19:11:56.489 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Filesystem watcher started successfully
-19:11:56.489 [main] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Scanning for existing descriptor files
-19:11:56.489 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Watch loop started
-19:11:56.490 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Stopping filesystem watcher
-19:11:56.490 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Watch loop interrupted
-19:11:56.490 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Watch loop exited
-19:11:56.494 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Filesystem watcher stopped
+  <testcase name="testStop" classname="org.flossware.jfswatcher.FileSystemDeploymentWatcherTest" time="0.004">
+    <system-out><![CDATA[17:53:58.887 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Starting filesystem watcher on directory: /tmp/junit-8061804554703474909
+17:53:58.888 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Filesystem watcher started successfully
+17:53:58.888 [main] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Scanning for existing descriptor files
+17:53:58.888 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Watch loop started
+17:53:58.888 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Stopping filesystem watcher
+17:53:58.888 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Watch loop interrupted
+17:53:58.888 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Watch loop exited
+17:53:58.889 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Filesystem watcher stopped
 ]]></system-out>
   </testcase>
   <testcase name="testAddNullListener" classname="org.flossware.jfswatcher.FileSystemDeploymentWatcherTest" time="0.003"/>
-  <testcase name="testStartSuccess" classname="org.flossware.jfswatcher.FileSystemDeploymentWatcherTest" time="0.004">
-    <system-out><![CDATA[19:11:56.501 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Starting filesystem watcher on directory: /tmp/junit-17380862855853395348
-19:11:56.502 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Filesystem watcher started successfully
-19:11:56.502 [main] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Scanning for existing descriptor files
-19:11:56.502 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Watch loop started
-19:11:56.503 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Stopping filesystem watcher
-19:11:56.503 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Watch loop interrupted
-19:11:56.503 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Watch loop exited
-19:11:56.503 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Filesystem watcher stopped
+  <testcase name="testStartSuccess" classname="org.flossware.jfswatcher.FileSystemDeploymentWatcherTest" time="0.005">
+    <system-out><![CDATA[17:53:58.895 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Starting filesystem watcher on directory: /tmp/junit-3552341705106510171
+17:53:58.896 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Filesystem watcher started successfully
+17:53:58.896 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Watch loop started
+17:53:58.896 [main] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Scanning for existing descriptor files
+17:53:58.897 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Stopping filesystem watcher
+17:53:58.897 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Watch loop interrupted
+17:53:58.897 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Watch loop exited
+17:53:58.898 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Filesystem watcher stopped
 ]]></system-out>
   </testcase>
   <testcase name="testStopWhenNotRunning" classname="org.flossware.jfswatcher.FileSystemDeploymentWatcherTest" time="0.002">
-    <system-out><![CDATA[19:11:56.506 [main] WARN org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Watcher is not running
+    <system-out><![CDATA[17:53:58.901 [main] WARN org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Watcher is not running
 ]]></system-out>
   </testcase>
-  <testcase name="testDetectRemovedFile" classname="org.flossware.jfswatcher.FileSystemDeploymentWatcherTest" time="0.209">
-    <system-out><![CDATA[19:11:56.510 [main] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Added deployment listener: org.flossware.jfswatcher.FileSystemDeploymentWatcherTest$3
-19:11:56.510 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Starting filesystem watcher on directory: /tmp/junit-19061848062553386
-19:11:56.511 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Filesystem watcher started successfully
-19:11:56.511 [main] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Scanning for existing descriptor files
-19:11:56.511 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Watch loop started
-19:11:56.511 [main] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Found existing descriptor: /tmp/junit-19061848062553386/app.yaml
-19:11:56.612 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-19061848062553386/app.yaml
-19:11:56.612 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_DELETE event for: app.yaml
-19:11:56.713 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor removed - /tmp/junit-19061848062553386/app.yaml
-19:11:56.714 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Stopping filesystem watcher
-19:11:56.715 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Watch loop interrupted
-19:11:56.715 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Watch loop exited
-19:11:56.715 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Filesystem watcher stopped
+  <testcase name="testDetectRemovedFile" classname="org.flossware.jfswatcher.FileSystemDeploymentWatcherTest" time="0.212">
+    <system-out><![CDATA[17:53:58.904 [main] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Added deployment listener: org.flossware.jfswatcher.FileSystemDeploymentWatcherTest$3
+17:53:58.905 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Starting filesystem watcher on directory: /tmp/junit-2819114823098370003
+17:53:58.905 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Filesystem watcher started successfully
+17:53:58.905 [main] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Scanning for existing descriptor files
+17:53:58.905 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Watch loop started
+17:53:58.906 [main] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Found existing descriptor: /tmp/junit-2819114823098370003/app.yaml
+17:53:59.006 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-2819114823098370003/app.yaml
+17:53:59.007 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_DELETE event for: app.yaml
+17:53:59.107 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor removed - /tmp/junit-2819114823098370003/app.yaml
+17:53:59.108 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Stopping filesystem watcher
+17:53:59.108 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Watch loop interrupted
+17:53:59.108 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Watch loop exited
+17:53:59.113 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Filesystem watcher stopped
 ]]></system-out>
   </testcase>
-  <testcase name="testStartNullWatchDirectory" classname="org.flossware.jfswatcher.FileSystemDeploymentWatcherTest" time="0.003"/>
-  <testcase name="testAddListener" classname="org.flossware.jfswatcher.FileSystemDeploymentWatcherTest" time="0.003">
-    <system-out><![CDATA[19:11:56.724 [main] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Added deployment listener: org.flossware.jfswatcher.FileSystemDeploymentWatcherTest$TestListener
+  <testcase name="testStartNullWatchDirectory" classname="org.flossware.jfswatcher.FileSystemDeploymentWatcherTest" time="0.002"/>
+  <testcase name="testAddListener" classname="org.flossware.jfswatcher.FileSystemDeploymentWatcherTest" time="0.002">
+    <system-out><![CDATA[17:53:59.120 [main] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Added deployment listener: org.flossware.jfswatcher.FileSystemDeploymentWatcherTest$TestListener
 ]]></system-out>
   </testcase>
-  <testcase name="testConstructorNullConfig" classname="org.flossware.jfswatcher.FileSystemDeploymentWatcherTest" time="0.002"/>
+  <testcase name="testConstructorNullConfig" classname="org.flossware.jfswatcher.FileSystemDeploymentWatcherTest" time="0.003"/>
   <testcase name="testStartNonExistentDirectory" classname="org.flossware.jfswatcher.FileSystemDeploymentWatcherTest" time="0.003"/>
-  <testcase name="testDetectModifiedFile" classname="org.flossware.jfswatcher.FileSystemDeploymentWatcherTest" time="0.209">
-    <system-out><![CDATA[19:11:56.735 [main] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Added deployment listener: org.flossware.jfswatcher.FileSystemDeploymentWatcherTest$2
-19:11:56.735 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Starting filesystem watcher on directory: /tmp/junit-3290974542109052743
-19:11:56.736 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Filesystem watcher started successfully
-19:11:56.736 [main] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Scanning for existing descriptor files
-19:11:56.736 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Watch loop started
-19:11:56.736 [main] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Found existing descriptor: /tmp/junit-3290974542109052743/app.yaml
-19:11:56.837 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-3290974542109052743/app.yaml
-19:11:56.838 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: app.yaml
-19:11:56.938 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-3290974542109052743/app.yaml
-19:11:56.939 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Stopping filesystem watcher
-19:11:56.940 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Watch loop interrupted
-19:11:56.940 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Watch loop exited
-19:11:56.940 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Filesystem watcher stopped
+  <testcase name="testDetectModifiedFile" classname="org.flossware.jfswatcher.FileSystemDeploymentWatcherTest" time="0.213">
+    <system-out><![CDATA[17:53:59.130 [main] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Added deployment listener: org.flossware.jfswatcher.FileSystemDeploymentWatcherTest$2
+17:53:59.131 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Starting filesystem watcher on directory: /tmp/junit-4009920004731030625
+17:53:59.132 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Filesystem watcher started successfully
+17:53:59.132 [main] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Scanning for existing descriptor files
+17:53:59.132 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Watch loop started
+17:53:59.132 [main] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Found existing descriptor: /tmp/junit-4009920004731030625/app.yaml
+17:53:59.232 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-4009920004731030625/app.yaml
+17:53:59.233 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: app.yaml
+17:53:59.333 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-4009920004731030625/app.yaml
+17:53:59.334 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Stopping filesystem watcher
+17:53:59.335 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Watch loop interrupted
+17:53:59.335 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Watch loop exited
+17:53:59.340 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Filesystem watcher stopped
 ]]></system-out>
   </testcase>
-  <testcase name="testFileExtensionFiltering" classname="org.flossware.jfswatcher.FileSystemDeploymentWatcherTest" time="0.61">
-    <system-out><![CDATA[19:11:56.945 [main] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Added deployment listener: org.flossware.jfswatcher.FileSystemDeploymentWatcherTest$4
-19:11:56.946 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Starting filesystem watcher on directory: /tmp/junit-18391363667561486546
-19:11:56.947 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Filesystem watcher started successfully
-19:11:56.947 [main] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Scanning for existing descriptor files
-19:11:56.947 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Watch loop started
-19:11:56.947 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: app.yaml
-19:11:56.948 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: app.yaml
-19:11:57.048 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-18391363667561486546/app.yaml
-19:11:57.549 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Stopping filesystem watcher
-19:11:57.550 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Watch loop interrupted
-19:11:57.550 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Watch loop exited
-19:11:57.551 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Filesystem watcher stopped
+  <testcase name="testFileExtensionFiltering" classname="org.flossware.jfswatcher.FileSystemDeploymentWatcherTest" time="0.608">
+    <system-out><![CDATA[17:53:59.344 [main] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Added deployment listener: org.flossware.jfswatcher.FileSystemDeploymentWatcherTest$4
+17:53:59.345 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Starting filesystem watcher on directory: /tmp/junit-4915400905371242125
+17:53:59.346 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Filesystem watcher started successfully
+17:53:59.346 [main] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Scanning for existing descriptor files
+17:53:59.346 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Watch loop started
+17:53:59.346 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: app.yaml
+17:53:59.346 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: app.yaml
+17:53:59.447 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-4915400905371242125/app.yaml
+17:53:59.947 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Stopping filesystem watcher
+17:53:59.948 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Watch loop interrupted
+17:53:59.948 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Watch loop exited
+17:53:59.949 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Filesystem watcher stopped
 ]]></system-out>
   </testcase>
-  <testcase name="testStartAlreadyRunning" classname="org.flossware.jfswatcher.FileSystemDeploymentWatcherTest" time="0.009">
-    <system-out><![CDATA[19:11:57.556 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Starting filesystem watcher on directory: /tmp/junit-9544971655116163087
-19:11:57.557 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Filesystem watcher started successfully
-19:11:57.557 [main] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Scanning for existing descriptor files
-19:11:57.557 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Watch loop started
-19:11:57.557 [main] WARN org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Watcher is already running
-19:11:57.557 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Stopping filesystem watcher
-19:11:57.557 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Watch loop interrupted
-19:11:57.557 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Watch loop exited
-19:11:57.562 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Filesystem watcher stopped
+  <testcase name="testStartAlreadyRunning" classname="org.flossware.jfswatcher.FileSystemDeploymentWatcherTest" time="0.005">
+    <system-out><![CDATA[17:53:59.952 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Starting filesystem watcher on directory: /tmp/junit-6846540744836837976
+17:53:59.953 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Filesystem watcher started successfully
+17:53:59.954 [main] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Scanning for existing descriptor files
+17:53:59.954 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Watch loop started
+17:53:59.954 [main] WARN org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Watcher is already running
+17:53:59.954 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Stopping filesystem watcher
+17:53:59.954 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Watch loop interrupted
+17:53:59.954 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Watch loop exited
+17:53:59.955 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Filesystem watcher stopped
 ]]></system-out>
   </testcase>
-  <testcase name="testDebouncing" classname="org.flossware.jfswatcher.FileSystemDeploymentWatcherTest" time="1.196">
-    <system-out><![CDATA[19:11:57.566 [main] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Added deployment listener: org.flossware.jfswatcher.FileSystemDeploymentWatcherTest$5
-19:11:57.566 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Starting filesystem watcher on directory: /tmp/junit-7548906638688453347
-19:11:57.567 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Filesystem watcher started successfully
-19:11:57.567 [main] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Scanning for existing descriptor files
-19:11:57.567 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Watch loop started
-19:11:57.567 [main] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Found existing descriptor: /tmp/junit-7548906638688453347/app.yaml
-19:11:57.667 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-7548906638688453347/app.yaml
-19:11:58.068 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: app.yaml
-19:11:58.089 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: app.yaml
-19:11:58.109 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: app.yaml
-19:11:58.130 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: app.yaml
-19:11:58.151 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: app.yaml
-19:11:58.251 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-7548906638688453347/app.yaml
-19:11:58.752 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Stopping filesystem watcher
-19:11:58.753 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Watch loop interrupted
-19:11:58.753 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Watch loop exited
-19:11:58.758 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Filesystem watcher stopped
+  <testcase name="testDebouncing" classname="org.flossware.jfswatcher.FileSystemDeploymentWatcherTest" time="1.19">
+    <system-out><![CDATA[17:53:59.959 [main] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Added deployment listener: org.flossware.jfswatcher.FileSystemDeploymentWatcherTest$5
+17:53:59.959 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Starting filesystem watcher on directory: /tmp/junit-893790955355559863
+17:53:59.960 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Filesystem watcher started successfully
+17:53:59.960 [main] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Scanning for existing descriptor files
+17:53:59.960 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Watch loop started
+17:53:59.960 [main] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Found existing descriptor: /tmp/junit-893790955355559863/app.yaml
+17:54:00.060 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-893790955355559863/app.yaml
+17:54:00.461 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: app.yaml
+17:54:00.482 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: app.yaml
+17:54:00.502 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: app.yaml
+17:54:00.523 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: app.yaml
+17:54:00.543 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: app.yaml
+17:54:00.643 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-893790955355559863/app.yaml
+17:54:01.144 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Stopping filesystem watcher
+17:54:01.145 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Watch loop interrupted
+17:54:01.145 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Watch loop exited
+17:54:01.146 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Filesystem watcher stopped
 ]]></system-out>
   </testcase>
-  <testcase name="testStartFileInsteadOfDirectory" classname="org.flossware.jfswatcher.FileSystemDeploymentWatcherTest" time="0.004"/>
-  <testcase name="testListenerException" classname="org.flossware.jfswatcher.FileSystemDeploymentWatcherTest" time="0.113">
-    <system-out><![CDATA[19:11:58.767 [main] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Added deployment listener: org.flossware.jfswatcher.FileSystemDeploymentWatcherTest$8
-19:11:58.768 [main] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Added deployment listener: org.flossware.jfswatcher.FileSystemDeploymentWatcherTest$9
-19:11:58.768 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Starting filesystem watcher on directory: /tmp/junit-7752353738075398079
-19:11:58.769 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Filesystem watcher started successfully
-19:11:58.769 [main] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Scanning for existing descriptor files
-19:11:58.769 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Watch loop started
-19:11:58.769 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: app.yaml
-19:11:58.770 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: app.yaml
-19:11:58.870 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-7752353738075398079/app.yaml
-19:11:58.870 [fs-watcher-debounce] ERROR org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Listener threw exception on descriptor modified
+  <testcase name="testStartFileInsteadOfDirectory" classname="org.flossware.jfswatcher.FileSystemDeploymentWatcherTest" time="0.003"/>
+  <testcase name="testListenerException" classname="org.flossware.jfswatcher.FileSystemDeploymentWatcherTest" time="0.115">
+    <system-out><![CDATA[17:54:01.155 [main] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Added deployment listener: org.flossware.jfswatcher.FileSystemDeploymentWatcherTest$8
+17:54:01.155 [main] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Added deployment listener: org.flossware.jfswatcher.FileSystemDeploymentWatcherTest$9
+17:54:01.155 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Starting filesystem watcher on directory: /tmp/junit-10917477039205756221
+17:54:01.156 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Filesystem watcher started successfully
+17:54:01.156 [main] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Scanning for existing descriptor files
+17:54:01.156 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Watch loop started
+17:54:01.157 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: app.yaml
+17:54:01.157 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: app.yaml
+17:54:01.257 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-10917477039205756221/app.yaml
+17:54:01.257 [fs-watcher-debounce] ERROR org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Listener threw exception on descriptor modified
 java.lang.RuntimeException: Test exception
 	at org.flossware.jfswatcher.FileSystemDeploymentWatcherTest$8.throwException(FileSystemDeploymentWatcherTest.java:387)
 	at org.flossware.jfswatcher.FileSystemDeploymentWatcherTest$8.onDescriptorModified(FileSystemDeploymentWatcherTest.java:397)
@@ -240,11 +240,11 @@ java.lang.RuntimeException: Test exception
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
 	at java.base/java.lang.Thread.run(Thread.java:1583)
-19:11:58.871 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Stopping filesystem watcher
-19:11:58.872 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Watch loop interrupted
-19:11:58.872 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Watch loop exited
-19:11:58.876 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Filesystem watcher stopped
+17:54:01.258 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Stopping filesystem watcher
+17:54:01.259 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Watch loop interrupted
+17:54:01.259 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Watch loop exited
+17:54:01.265 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Filesystem watcher stopped
 ]]></system-out>
   </testcase>
-  <testcase name="testConstructor" classname="org.flossware.jfswatcher.FileSystemDeploymentWatcherTest" time="0.002"/>
+  <testcase name="testConstructor" classname="org.flossware.jfswatcher.FileSystemDeploymentWatcherTest" time="0.003"/>
 </testsuite>

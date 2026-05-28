@@ -1,6 +1,6 @@
 # JFS Watcher
 
-[![Maven Central](https://img.shields.io/maven-central/v/org.flossware/jfs-watcher.svg?label=Maven%20Central)](https://central.sonatype.com/artifact/org.flossware/jfs-watcher)
+[![Maven Central](https://img.shields.io/maven-central/v/org.flossware/fs-watcher-java.svg?label=Maven%20Central)](https://central.sonatype.com/artifact/org.flossware/fs-watcher-java)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 Filesystem watcher for monitoring directory changes with debouncing support.
@@ -23,7 +23,7 @@ Filesystem watcher for monitoring directory changes with debouncing support.
 ```xml
 <dependency>
     <groupId>org.flossware</groupId>
-    <artifactId>jfs-watcher</artifactId>
+    <artifactId>fs-watcher-java</artifactId>
     <version>1.0</version>
 </dependency>
 ```
@@ -31,7 +31,7 @@ Filesystem watcher for monitoring directory changes with debouncing support.
 ### Gradle
 
 ```gradle
-implementation 'org.flossware:jfs-watcher:1.0'
+implementation 'org.flossware:fs-watcher-java:1.0'
 ```
 
 ## Quick Start
@@ -39,7 +39,7 @@ implementation 'org.flossware:jfs-watcher:1.0'
 ### Basic Usage
 
 ```java
-import org.flossware.jfswatcher.*;
+import org.flossware.fswatcher.*;
 import java.nio.file.*;
 
 // Configure watcher
@@ -319,9 +319,9 @@ Contributions are welcome! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for gui
 
 ## Links
 
-- [GitHub Repository](https://github.com/FlossWare/jfs-watcher)
-- [Issue Tracker](https://github.com/FlossWare/jfs-watcher/issues)
-- [Javadoc](https://javadoc.io/doc/org.flossware/jfs-watcher)
+- [GitHub Repository](https://github.com/FlossWare/fs-watcher-java)
+- [Issue Tracker](https://github.com/FlossWare/fs-watcher-java/issues)
+- [Javadoc](https://javadoc.io/doc/org.flossware/fs-watcher-java)
 
 ## Changelog
 

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="org.flossware.jfswatcher.FileSystemDeploymentWatcherEdgeCasesTest" time="6.979" tests="8" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="org.flossware.jfswatcher.FileSystemDeploymentWatcherEdgeCasesTest" time="7.098" tests="8" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -13,7 +13,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="US"/>
     <property name="sun.boot.library.path" value="/home/sfloess/.sdkman/candidates/java/21.0.11-tem/lib"/>
-    <property name="sun.java.command" value="/home/sfloess/Development/github/FlossWare/jfs-watcher/target/surefire/surefirebooter-20260524191147504_3.jar /home/sfloess/Development/github/FlossWare/jfs-watcher/target/surefire 2026-05-24T19-11-47_373-jvmRun1 surefire-20260524191147504_1tmp surefire_0-20260524191147504_2tmp"/>
+    <property name="sun.java.command" value="/home/sfloess/Development/github/FlossWare/jfs-watcher/target/surefire/surefirebooter-20260526175349410_3.jar /home/sfloess/Development/github/FlossWare/jfs-watcher/target/surefire 2026-05-26T17-53-49_288-jvmRun1 surefire-20260526175349410_1tmp surefire_0-20260526175349410_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/home/sfloess/Development/github/FlossWare/jfs-watcher/target/test-classes:/home/sfloess/Development/github/FlossWare/jfs-watcher/target/classes:/home/sfloess/.m2/repository/org/slf4j/slf4j-api/2.0.9/slf4j-api-2.0.9.jar:/home/sfloess/.m2/repository/org/junit/jupiter/junit-jupiter/6.1.0/junit-jupiter-6.1.0.jar:/home/sfloess/.m2/repository/org/junit/jupiter/junit-jupiter-api/6.1.0/junit-jupiter-api-6.1.0.jar:/home/sfloess/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/home/sfloess/.m2/repository/org/junit/platform/junit-platform-commons/6.1.0/junit-platform-commons-6.1.0.jar:/home/sfloess/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/home/sfloess/.m2/repository/org/jspecify/jspecify/1.0.0/jspecify-1.0.0.jar:/home/sfloess/.m2/repository/org/junit/jupiter/junit-jupiter-params/6.1.0/junit-jupiter-params-6.1.0.jar:/home/sfloess/.m2/repository/org/junit/jupiter/junit-jupiter-engine/6.1.0/junit-jupiter-engine-6.1.0.jar:/home/sfloess/.m2/repository/org/junit/platform/junit-platform-engine/6.1.0/junit-platform-engine-6.1.0.jar:/home/sfloess/.m2/repository/ch/qos/logback/logback-classic/1.4.11/logback-classic-1.4.11.jar:/home/sfloess/.m2/repository/ch/qos/logback/logback-core/1.4.11/logback-core-1.4.11.jar:"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -28,7 +28,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
-    <property name="surefire.real.class.path" value="/home/sfloess/Development/github/FlossWare/jfs-watcher/target/surefire/surefirebooter-20260524191147504_3.jar"/>
+    <property name="surefire.real.class.path" value="/home/sfloess/Development/github/FlossWare/jfs-watcher/target/surefire/surefirebooter-20260526175349410_3.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="21.0.11+10-LTS"/>
     <property name="user.name" value="sfloess"/>
@@ -55,63 +55,63 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="65.0"/>
   </properties>
-  <testcase name="testClosedWatchServiceException" classname="org.flossware.jfswatcher.FileSystemDeploymentWatcherEdgeCasesTest" time="0.826">
-    <system-out><![CDATA[19:11:49.506 [main] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Added deployment listener: org.flossware.jfswatcher.FileSystemDeploymentWatcherEdgeCasesTest$5
-19:11:49.516 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Starting filesystem watcher on directory: /tmp/junit-6758685187229981967
-19:11:49.522 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Watch loop started
-19:11:49.522 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Filesystem watcher started successfully
-19:11:49.522 [main] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Scanning for existing descriptor files
-19:11:49.525 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: app.yaml
-19:11:49.527 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: app.yaml
-19:11:50.028 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-6758685187229981967/app.yaml
-19:11:50.038 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Stopping filesystem watcher
-19:11:50.040 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Watch loop interrupted
-19:11:50.040 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Watch loop exited
-19:11:50.042 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Filesystem watcher stopped
-19:11:50.052 [main] WARN org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Watcher is not running
+  <testcase name="testClosedWatchServiceException" classname="org.flossware.jfswatcher.FileSystemDeploymentWatcherEdgeCasesTest" time="0.916">
+    <system-out><![CDATA[17:53:51.821 [main] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Added deployment listener: org.flossware.jfswatcher.FileSystemDeploymentWatcherEdgeCasesTest$5
+17:53:51.834 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Starting filesystem watcher on directory: /tmp/junit-16956646465819404693
+17:53:51.842 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Filesystem watcher started successfully
+17:53:51.842 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Watch loop started
+17:53:51.843 [main] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Scanning for existing descriptor files
+17:53:51.847 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: app.yaml
+17:53:51.848 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: app.yaml
+17:53:52.349 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-16956646465819404693/app.yaml
+17:53:52.360 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Stopping filesystem watcher
+17:53:52.361 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Watch loop interrupted
+17:53:52.362 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Watch loop exited
+17:53:52.363 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Filesystem watcher stopped
+17:53:52.375 [main] WARN org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Watcher is not running
 ]]></system-out>
   </testcase>
   <testcase name="testScanExistingFilesException" classname="org.flossware.jfswatcher.FileSystemDeploymentWatcherEdgeCasesTest" time="0.512">
-    <system-out><![CDATA[19:11:50.083 [main] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Added deployment listener: org.flossware.jfswatcher.FileSystemDeploymentWatcherEdgeCasesTest$1
-19:11:50.084 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Starting filesystem watcher on directory: /tmp/junit-12050127639557762673
-19:11:50.085 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Filesystem watcher started successfully
-19:11:50.085 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Watch loop started
-19:11:50.085 [main] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Scanning for existing descriptor files
-19:11:50.086 [main] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Found existing descriptor: /tmp/junit-12050127639557762673/app.yaml
-19:11:50.587 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-12050127639557762673/app.yaml
-19:11:50.588 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Stopping filesystem watcher
-19:11:50.589 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Watch loop interrupted
-19:11:50.589 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Watch loop exited
-19:11:50.590 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Filesystem watcher stopped
+    <system-out><![CDATA[17:53:52.463 [main] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Added deployment listener: org.flossware.jfswatcher.FileSystemDeploymentWatcherEdgeCasesTest$1
+17:53:52.464 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Starting filesystem watcher on directory: /tmp/junit-6663146826997849064
+17:53:52.465 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Filesystem watcher started successfully
+17:53:52.465 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Watch loop started
+17:53:52.465 [main] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Scanning for existing descriptor files
+17:53:52.466 [main] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Found existing descriptor: /tmp/junit-6663146826997849064/app.yaml
+17:53:52.967 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-6663146826997849064/app.yaml
+17:53:52.968 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Stopping filesystem watcher
+17:53:52.969 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Watch loop interrupted
+17:53:52.969 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Watch loop exited
+17:53:52.970 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Filesystem watcher stopped
 ]]></system-out>
   </testcase>
-  <testcase name="testWatchKeyInvalid" classname="org.flossware.jfswatcher.FileSystemDeploymentWatcherEdgeCasesTest" time="0.512">
-    <system-out><![CDATA[19:11:50.598 [main] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Added deployment listener: org.flossware.jfswatcher.FileSystemDeploymentWatcherEdgeCasesTest$4
-19:11:50.599 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Starting filesystem watcher on directory: /tmp/junit-6730591726097910489
-19:11:50.600 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Filesystem watcher started successfully
-19:11:50.600 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Watch loop started
-19:11:50.600 [main] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Scanning for existing descriptor files
-19:11:50.601 [main] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Found existing descriptor: /tmp/junit-6730591726097910489/app.yaml
-19:11:51.101 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-6730591726097910489/app.yaml
-19:11:51.103 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Stopping filesystem watcher
-19:11:51.103 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Watch loop interrupted
-19:11:51.104 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Watch loop exited
-19:11:51.105 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Filesystem watcher stopped
+  <testcase name="testWatchKeyInvalid" classname="org.flossware.jfswatcher.FileSystemDeploymentWatcherEdgeCasesTest" time="0.511">
+    <system-out><![CDATA[17:53:52.976 [main] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Added deployment listener: org.flossware.jfswatcher.FileSystemDeploymentWatcherEdgeCasesTest$4
+17:53:52.977 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Starting filesystem watcher on directory: /tmp/junit-14163723495701223421
+17:53:52.978 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Filesystem watcher started successfully
+17:53:52.978 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Watch loop started
+17:53:52.978 [main] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Scanning for existing descriptor files
+17:53:52.978 [main] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Found existing descriptor: /tmp/junit-14163723495701223421/app.yaml
+17:53:53.479 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-14163723495701223421/app.yaml
+17:53:53.480 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Stopping filesystem watcher
+17:53:53.481 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Watch loop interrupted
+17:53:53.481 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Watch loop exited
+17:53:53.482 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Filesystem watcher stopped
 ]]></system-out>
   </testcase>
-  <testcase name="testStartException" classname="org.flossware.jfswatcher.FileSystemDeploymentWatcherEdgeCasesTest" time="0.009">
-    <system-out><![CDATA[19:11:51.115 [main] WARN org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Watcher is not running
+  <testcase name="testStartException" classname="org.flossware.jfswatcher.FileSystemDeploymentWatcherEdgeCasesTest" time="0.008">
+    <system-out><![CDATA[17:53:53.491 [main] WARN org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Watcher is not running
 ]]></system-out>
   </testcase>
-  <testcase name="testDescriptorDetectedListenerException" classname="org.flossware.jfswatcher.FileSystemDeploymentWatcherEdgeCasesTest" time="0.517">
-    <system-out><![CDATA[19:11:51.121 [main] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Added deployment listener: org.flossware.jfswatcher.FileSystemDeploymentWatcherEdgeCasesTest$2
-19:11:51.121 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Starting filesystem watcher on directory: /tmp/junit-3011190272466081667
-19:11:51.122 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Filesystem watcher started successfully
-19:11:51.123 [main] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Scanning for existing descriptor files
-19:11:51.123 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Watch loop started
-19:11:51.123 [main] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Found existing descriptor: /tmp/junit-3011190272466081667/app.yaml
-19:11:51.624 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-3011190272466081667/app.yaml
-19:11:51.624 [fs-watcher-debounce] ERROR org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Listener threw exception on descriptor detected
+  <testcase name="testDescriptorDetectedListenerException" classname="org.flossware.jfswatcher.FileSystemDeploymentWatcherEdgeCasesTest" time="0.521">
+    <system-out><![CDATA[17:53:53.496 [main] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Added deployment listener: org.flossware.jfswatcher.FileSystemDeploymentWatcherEdgeCasesTest$2
+17:53:53.497 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Starting filesystem watcher on directory: /tmp/junit-15344664451622856901
+17:53:53.498 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Filesystem watcher started successfully
+17:53:53.498 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Watch loop started
+17:53:53.498 [main] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Scanning for existing descriptor files
+17:53:53.499 [main] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Found existing descriptor: /tmp/junit-15344664451622856901/app.yaml
+17:53:53.999 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-15344664451622856901/app.yaml
+17:53:54.000 [fs-watcher-debounce] ERROR org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Listener threw exception on descriptor detected
 java.lang.RuntimeException: Test exception in onDescriptorDetected
 	at org.flossware.jfswatcher.FileSystemDeploymentWatcherEdgeCasesTest$2.onDescriptorDetected(FileSystemDeploymentWatcherEdgeCasesTest.java:107)
 	at org.flossware.jfswatcher.FileSystemDeploymentWatcher.notifyDescriptorDetected(FileSystemDeploymentWatcher.java:337)
@@ -123,449 +123,448 @@ java.lang.RuntimeException: Test exception in onDescriptorDetected
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
 	at java.base/java.lang.Thread.run(Thread.java:1583)
-19:11:51.631 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Stopping filesystem watcher
-19:11:51.632 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Watch loop interrupted
-19:11:51.632 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Watch loop exited
-19:11:51.633 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Filesystem watcher stopped
+17:53:54.005 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Stopping filesystem watcher
+17:53:54.006 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Watch loop interrupted
+17:53:54.006 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Watch loop exited
+17:53:54.013 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Filesystem watcher stopped
 ]]></system-out>
   </testcase>
   <testcase name="testWatchEventOverflow" classname="org.flossware.jfswatcher.FileSystemDeploymentWatcherEdgeCasesTest" time="0.53">
-    <system-out><![CDATA[19:11:51.639 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Starting filesystem watcher on directory: /tmp/junit-15413819527590098993
-19:11:51.640 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Filesystem watcher started successfully
-19:11:51.640 [main] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Scanning for existing descriptor files
-19:11:51.640 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Watch loop started
-19:11:51.644 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file0.yaml
-19:11:51.644 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file0.yaml
-19:11:51.644 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-15413819527590098993/file0.yaml
-19:11:51.645 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file1.yaml
-19:11:51.645 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-15413819527590098993/file0.yaml
-19:11:51.645 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file1.yaml
-19:11:51.645 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-15413819527590098993/file1.yaml
-19:11:51.645 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file2.yaml
-19:11:51.645 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-15413819527590098993/file1.yaml
-19:11:51.645 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file2.yaml
-19:11:51.645 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-15413819527590098993/file2.yaml
-19:11:51.645 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-15413819527590098993/file2.yaml
-19:11:51.645 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file3.yaml
-19:11:51.646 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file3.yaml
-19:11:51.646 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-15413819527590098993/file3.yaml
-19:11:51.646 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file4.yaml
-19:11:51.646 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-15413819527590098993/file3.yaml
-19:11:51.646 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file4.yaml
-19:11:51.646 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-15413819527590098993/file4.yaml
-19:11:51.646 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file5.yaml
-19:11:51.646 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-15413819527590098993/file4.yaml
-19:11:51.647 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file5.yaml
-19:11:51.647 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-15413819527590098993/file5.yaml
-19:11:51.647 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file6.yaml
-19:11:51.647 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-15413819527590098993/file5.yaml
-19:11:51.647 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file6.yaml
-19:11:51.647 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-15413819527590098993/file6.yaml
-19:11:51.647 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file7.yaml
-19:11:51.647 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-15413819527590098993/file6.yaml
-19:11:51.647 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-15413819527590098993/file7.yaml
-19:11:51.647 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file7.yaml
-19:11:51.648 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-15413819527590098993/file7.yaml
-19:11:51.648 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file8.yaml
-19:11:51.649 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-15413819527590098993/file8.yaml
-19:11:51.649 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file8.yaml
-19:11:51.649 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-15413819527590098993/file8.yaml
-19:11:51.649 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file9.yaml
-19:11:51.650 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-15413819527590098993/file9.yaml
-19:11:51.650 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file9.yaml
-19:11:51.650 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file10.yaml
-19:11:51.650 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-15413819527590098993/file9.yaml
-19:11:51.650 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-15413819527590098993/file10.yaml
-19:11:51.650 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file10.yaml
-19:11:51.651 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file11.yaml
-19:11:51.651 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-15413819527590098993/file10.yaml
-19:11:51.651 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file11.yaml
-19:11:51.651 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-15413819527590098993/file11.yaml
-19:11:51.651 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-15413819527590098993/file11.yaml
-19:11:51.651 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file12.yaml
-19:11:51.652 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-15413819527590098993/file12.yaml
-19:11:51.652 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file12.yaml
-19:11:51.652 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-15413819527590098993/file12.yaml
-19:11:51.652 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file13.yaml
-19:11:51.653 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-15413819527590098993/file13.yaml
-19:11:51.653 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file13.yaml
-19:11:51.653 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file14.yaml
-19:11:51.653 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-15413819527590098993/file13.yaml
-19:11:51.653 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file14.yaml
-19:11:51.653 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-15413819527590098993/file14.yaml
-19:11:51.654 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-15413819527590098993/file14.yaml
-19:11:51.654 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file15.yaml
-19:11:51.654 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file15.yaml
-19:11:51.654 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-15413819527590098993/file15.yaml
-19:11:51.654 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file16.yaml
-19:11:51.654 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-15413819527590098993/file15.yaml
-19:11:51.655 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file16.yaml
-19:11:51.655 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-15413819527590098993/file16.yaml
-19:11:51.655 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file17.yaml
-19:11:51.655 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-15413819527590098993/file16.yaml
-19:11:51.656 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-15413819527590098993/file17.yaml
-19:11:51.656 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file17.yaml
-19:11:51.656 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-15413819527590098993/file17.yaml
-19:11:51.656 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file18.yaml
-19:11:51.657 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-15413819527590098993/file18.yaml
-19:11:51.657 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file18.yaml
-19:11:51.657 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-15413819527590098993/file18.yaml
-19:11:51.657 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file19.yaml
-19:11:51.658 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-15413819527590098993/file19.yaml
-19:11:51.658 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file19.yaml
-19:11:51.658 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-15413819527590098993/file19.yaml
-19:11:51.658 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file20.yaml
-19:11:51.659 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file20.yaml
-19:11:51.659 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file21.yaml
-19:11:51.659 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-15413819527590098993/file20.yaml
-19:11:51.659 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file21.yaml
-19:11:51.659 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-15413819527590098993/file20.yaml
-19:11:51.659 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-15413819527590098993/file21.yaml
-19:11:51.660 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-15413819527590098993/file21.yaml
-19:11:51.660 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file22.yaml
-19:11:51.660 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file22.yaml
-19:11:51.660 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file23.yaml
-19:11:51.660 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-15413819527590098993/file22.yaml
-19:11:51.660 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-15413819527590098993/file22.yaml
-19:11:51.660 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-15413819527590098993/file23.yaml
-19:11:51.660 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file23.yaml
-19:11:51.661 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file24.yaml
-19:11:51.661 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-15413819527590098993/file23.yaml
-19:11:51.661 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file24.yaml
-19:11:51.661 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-15413819527590098993/file24.yaml
-19:11:51.661 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-15413819527590098993/file24.yaml
-19:11:51.661 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file25.yaml
-19:11:51.662 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file25.yaml
-19:11:51.662 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-15413819527590098993/file25.yaml
-19:11:51.662 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file26.yaml
-19:11:51.662 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-15413819527590098993/file25.yaml
-19:11:51.662 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-15413819527590098993/file26.yaml
-19:11:51.662 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file26.yaml
-19:11:51.662 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file27.yaml
-19:11:51.662 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-15413819527590098993/file26.yaml
-19:11:51.663 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file27.yaml
-19:11:51.663 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-15413819527590098993/file27.yaml
-19:11:51.663 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file28.yaml
-19:11:51.663 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-15413819527590098993/file27.yaml
-19:11:51.663 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file28.yaml
-19:11:51.663 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-15413819527590098993/file28.yaml
-19:11:51.663 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-15413819527590098993/file28.yaml
-19:11:51.663 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file29.yaml
-19:11:51.664 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-15413819527590098993/file29.yaml
-19:11:51.664 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file29.yaml
-19:11:51.664 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file30.yaml
-19:11:51.664 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-15413819527590098993/file29.yaml
-19:11:51.664 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-15413819527590098993/file30.yaml
-19:11:51.664 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file30.yaml
-19:11:51.665 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-15413819527590098993/file30.yaml
-19:11:51.665 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file31.yaml
-19:11:51.665 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-15413819527590098993/file31.yaml
-19:11:51.665 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file31.yaml
-19:11:51.665 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file32.yaml
-19:11:51.665 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-15413819527590098993/file31.yaml
-19:11:51.666 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file32.yaml
-19:11:51.666 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-15413819527590098993/file32.yaml
-19:11:51.666 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file33.yaml
-19:11:51.666 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-15413819527590098993/file32.yaml
-19:11:51.666 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file33.yaml
-19:11:51.666 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-15413819527590098993/file33.yaml
-19:11:51.666 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-15413819527590098993/file33.yaml
-19:11:51.666 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file34.yaml
-19:11:51.666 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file34.yaml
-19:11:51.666 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-15413819527590098993/file34.yaml
-19:11:51.667 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file35.yaml
-19:11:51.667 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-15413819527590098993/file34.yaml
-19:11:51.667 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file35.yaml
-19:11:51.667 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-15413819527590098993/file35.yaml
-19:11:51.667 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-15413819527590098993/file35.yaml
-19:11:51.667 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file36.yaml
-19:11:51.667 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file36.yaml
-19:11:51.667 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-15413819527590098993/file36.yaml
-19:11:51.667 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file37.yaml
-19:11:51.667 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-15413819527590098993/file36.yaml
-19:11:51.668 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file37.yaml
-19:11:51.668 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-15413819527590098993/file37.yaml
-19:11:51.668 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file38.yaml
-19:11:51.668 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-15413819527590098993/file37.yaml
-19:11:51.668 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file38.yaml
-19:11:51.668 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-15413819527590098993/file38.yaml
-19:11:51.668 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file39.yaml
-19:11:51.668 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-15413819527590098993/file38.yaml
-19:11:51.668 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file39.yaml
-19:11:51.668 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-15413819527590098993/file39.yaml
-19:11:51.668 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file40.yaml
-19:11:51.668 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-15413819527590098993/file39.yaml
-19:11:51.669 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file40.yaml
-19:11:51.669 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-15413819527590098993/file40.yaml
-19:11:51.669 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file41.yaml
-19:11:51.669 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-15413819527590098993/file40.yaml
-19:11:51.669 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file41.yaml
-19:11:51.669 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-15413819527590098993/file41.yaml
-19:11:51.669 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-15413819527590098993/file41.yaml
-19:11:51.669 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file42.yaml
-19:11:51.669 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file42.yaml
-19:11:51.669 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-15413819527590098993/file42.yaml
-19:11:51.670 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-15413819527590098993/file42.yaml
-19:11:51.670 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file43.yaml
-19:11:51.670 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file43.yaml
-19:11:51.670 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-15413819527590098993/file43.yaml
-19:11:51.670 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file44.yaml
-19:11:51.670 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-15413819527590098993/file43.yaml
-19:11:51.670 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file44.yaml
-19:11:51.670 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-15413819527590098993/file44.yaml
-19:11:51.670 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file45.yaml
-19:11:51.670 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-15413819527590098993/file44.yaml
-19:11:51.671 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file45.yaml
-19:11:51.671 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-15413819527590098993/file45.yaml
-19:11:51.671 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file46.yaml
-19:11:51.671 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-15413819527590098993/file45.yaml
-19:11:51.671 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-15413819527590098993/file46.yaml
-19:11:51.671 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file46.yaml
-19:11:51.671 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-15413819527590098993/file46.yaml
-19:11:51.671 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file47.yaml
-19:11:51.672 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-15413819527590098993/file47.yaml
-19:11:51.672 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file47.yaml
-19:11:51.672 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file48.yaml
-19:11:51.672 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-15413819527590098993/file47.yaml
-19:11:51.672 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file48.yaml
-19:11:51.672 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-15413819527590098993/file48.yaml
-19:11:51.672 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file49.yaml
-19:11:51.672 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-15413819527590098993/file48.yaml
-19:11:51.672 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file49.yaml
-19:11:51.672 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-15413819527590098993/file49.yaml
-19:11:51.672 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file50.yaml
-19:11:51.673 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-15413819527590098993/file49.yaml
-19:11:51.673 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file50.yaml
-19:11:51.673 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-15413819527590098993/file50.yaml
-19:11:51.673 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-15413819527590098993/file50.yaml
-19:11:51.673 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file51.yaml
-19:11:51.673 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file51.yaml
-19:11:51.673 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-15413819527590098993/file51.yaml
-19:11:51.673 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file52.yaml
-19:11:51.673 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-15413819527590098993/file51.yaml
-19:11:51.674 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file52.yaml
-19:11:51.674 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-15413819527590098993/file52.yaml
-19:11:51.674 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file53.yaml
-19:11:51.674 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-15413819527590098993/file52.yaml
-19:11:51.674 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file53.yaml
-19:11:51.674 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-15413819527590098993/file53.yaml
-19:11:51.674 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file54.yaml
-19:11:51.674 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-15413819527590098993/file53.yaml
-19:11:51.674 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-15413819527590098993/file54.yaml
-19:11:51.674 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file54.yaml
-19:11:51.674 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file55.yaml
-19:11:51.674 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-15413819527590098993/file54.yaml
-19:11:51.675 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file55.yaml
-19:11:51.675 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-15413819527590098993/file55.yaml
-19:11:51.675 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file56.yaml
-19:11:51.675 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-15413819527590098993/file55.yaml
-19:11:51.675 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file56.yaml
-19:11:51.675 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-15413819527590098993/file56.yaml
-19:11:51.675 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file57.yaml
-19:11:51.675 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-15413819527590098993/file56.yaml
-19:11:51.675 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file57.yaml
-19:11:51.675 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-15413819527590098993/file57.yaml
-19:11:51.675 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file58.yaml
-19:11:51.675 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-15413819527590098993/file57.yaml
-19:11:51.676 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file58.yaml
-19:11:51.676 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-15413819527590098993/file58.yaml
-19:11:51.676 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file59.yaml
-19:11:51.676 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-15413819527590098993/file58.yaml
-19:11:51.676 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file59.yaml
-19:11:51.676 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-15413819527590098993/file59.yaml
-19:11:51.676 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-15413819527590098993/file59.yaml
-19:11:51.676 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file60.yaml
-19:11:51.676 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file60.yaml
-19:11:51.676 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-15413819527590098993/file60.yaml
-19:11:51.676 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-15413819527590098993/file60.yaml
-19:11:51.676 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file61.yaml
-19:11:51.677 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file61.yaml
-19:11:51.677 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-15413819527590098993/file61.yaml
-19:11:51.677 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file62.yaml
-19:11:51.677 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-15413819527590098993/file61.yaml
-19:11:51.677 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file62.yaml
-19:11:51.677 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-15413819527590098993/file62.yaml
-19:11:51.677 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file63.yaml
-19:11:51.677 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-15413819527590098993/file62.yaml
-19:11:51.677 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file63.yaml
-19:11:51.677 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-15413819527590098993/file63.yaml
-19:11:51.677 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file64.yaml
-19:11:51.677 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-15413819527590098993/file63.yaml
-19:11:51.677 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file64.yaml
-19:11:51.677 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-15413819527590098993/file64.yaml
-19:11:51.678 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file65.yaml
-19:11:51.678 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-15413819527590098993/file64.yaml
-19:11:51.678 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file65.yaml
-19:11:51.678 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-15413819527590098993/file65.yaml
-19:11:51.678 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file66.yaml
-19:11:51.678 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-15413819527590098993/file65.yaml
-19:11:51.678 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file66.yaml
-19:11:51.678 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-15413819527590098993/file66.yaml
-19:11:51.678 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file67.yaml
-19:11:51.678 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-15413819527590098993/file66.yaml
-19:11:51.678 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file67.yaml
-19:11:51.678 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-15413819527590098993/file67.yaml
-19:11:51.678 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file68.yaml
-19:11:51.678 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-15413819527590098993/file67.yaml
-19:11:51.679 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file68.yaml
-19:11:51.679 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-15413819527590098993/file68.yaml
-19:11:51.679 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file69.yaml
-19:11:51.679 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-15413819527590098993/file68.yaml
-19:11:51.679 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file69.yaml
-19:11:51.679 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-15413819527590098993/file69.yaml
-19:11:51.679 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file70.yaml
-19:11:51.679 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-15413819527590098993/file69.yaml
-19:11:51.679 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file70.yaml
-19:11:51.679 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-15413819527590098993/file70.yaml
-19:11:51.679 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file71.yaml
-19:11:51.679 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-15413819527590098993/file70.yaml
-19:11:51.679 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file71.yaml
-19:11:51.679 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-15413819527590098993/file71.yaml
-19:11:51.679 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file72.yaml
-19:11:51.679 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-15413819527590098993/file71.yaml
-19:11:51.680 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file72.yaml
-19:11:51.680 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-15413819527590098993/file72.yaml
-19:11:51.680 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file73.yaml
-19:11:51.680 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-15413819527590098993/file72.yaml
-19:11:51.680 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-15413819527590098993/file73.yaml
-19:11:51.680 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file73.yaml
-19:11:51.680 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file74.yaml
-19:11:51.680 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-15413819527590098993/file73.yaml
-19:11:51.681 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file74.yaml
-19:11:51.681 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-15413819527590098993/file74.yaml
-19:11:51.681 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file75.yaml
-19:11:51.681 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-15413819527590098993/file74.yaml
-19:11:51.681 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-15413819527590098993/file75.yaml
-19:11:51.681 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file75.yaml
-19:11:51.681 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file76.yaml
-19:11:51.681 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-15413819527590098993/file75.yaml
-19:11:51.681 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file76.yaml
-19:11:51.681 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-15413819527590098993/file76.yaml
-19:11:51.682 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file77.yaml
-19:11:51.682 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-15413819527590098993/file76.yaml
-19:11:51.682 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file77.yaml
-19:11:51.682 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-15413819527590098993/file77.yaml
-19:11:51.682 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file78.yaml
-19:11:51.682 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-15413819527590098993/file77.yaml
-19:11:51.682 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-15413819527590098993/file78.yaml
-19:11:51.682 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file78.yaml
-19:11:51.682 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file79.yaml
-19:11:51.682 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-15413819527590098993/file78.yaml
-19:11:51.682 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-15413819527590098993/file79.yaml
-19:11:51.682 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file79.yaml
-19:11:51.683 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file80.yaml
-19:11:51.683 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-15413819527590098993/file79.yaml
-19:11:51.683 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-15413819527590098993/file80.yaml
-19:11:51.683 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file80.yaml
-19:11:51.683 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file81.yaml
-19:11:51.683 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-15413819527590098993/file80.yaml
-19:11:51.683 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file81.yaml
-19:11:51.683 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-15413819527590098993/file81.yaml
-19:11:51.684 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file82.yaml
-19:11:51.684 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-15413819527590098993/file81.yaml
-19:11:51.684 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-15413819527590098993/file82.yaml
-19:11:51.684 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file82.yaml
-19:11:51.684 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file83.yaml
-19:11:51.684 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-15413819527590098993/file82.yaml
-19:11:51.684 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-15413819527590098993/file83.yaml
-19:11:51.684 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file83.yaml
-19:11:51.685 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file84.yaml
-19:11:51.685 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-15413819527590098993/file83.yaml
-19:11:51.685 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file84.yaml
-19:11:51.685 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-15413819527590098993/file84.yaml
-19:11:51.686 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file85.yaml
-19:11:51.686 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-15413819527590098993/file84.yaml
-19:11:51.686 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file85.yaml
-19:11:51.686 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-15413819527590098993/file85.yaml
-19:11:51.686 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file86.yaml
-19:11:51.686 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-15413819527590098993/file85.yaml
-19:11:51.686 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file86.yaml
-19:11:51.686 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-15413819527590098993/file86.yaml
-19:11:51.686 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file87.yaml
-19:11:51.686 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-15413819527590098993/file86.yaml
-19:11:51.687 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file87.yaml
-19:11:51.687 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-15413819527590098993/file87.yaml
-19:11:51.687 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-15413819527590098993/file87.yaml
-19:11:51.687 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file88.yaml
-19:11:51.687 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file88.yaml
-19:11:51.687 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-15413819527590098993/file88.yaml
-19:11:51.687 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file89.yaml
-19:11:51.687 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-15413819527590098993/file88.yaml
-19:11:51.688 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file89.yaml
-19:11:51.688 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-15413819527590098993/file89.yaml
-19:11:51.688 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file90.yaml
-19:11:51.688 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-15413819527590098993/file89.yaml
-19:11:51.688 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-15413819527590098993/file90.yaml
-19:11:51.688 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file90.yaml
-19:11:51.688 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file91.yaml
-19:11:51.688 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-15413819527590098993/file90.yaml
-19:11:51.688 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file91.yaml
-19:11:51.688 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-15413819527590098993/file91.yaml
-19:11:51.689 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file92.yaml
-19:11:51.689 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-15413819527590098993/file91.yaml
-19:11:51.689 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file92.yaml
-19:11:51.689 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-15413819527590098993/file92.yaml
-19:11:51.689 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file93.yaml
-19:11:51.689 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-15413819527590098993/file92.yaml
-19:11:51.689 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file93.yaml
-19:11:51.689 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-15413819527590098993/file93.yaml
-19:11:51.689 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-15413819527590098993/file93.yaml
-19:11:51.689 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file94.yaml
-19:11:51.690 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file94.yaml
-19:11:51.690 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-15413819527590098993/file94.yaml
-19:11:51.690 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file95.yaml
-19:11:51.690 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-15413819527590098993/file94.yaml
-19:11:51.690 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file95.yaml
-19:11:51.690 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-15413819527590098993/file95.yaml
-19:11:51.690 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file96.yaml
-19:11:51.690 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-15413819527590098993/file95.yaml
-19:11:51.690 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file96.yaml
-19:11:51.690 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-15413819527590098993/file96.yaml
-19:11:51.690 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-15413819527590098993/file96.yaml
-19:11:51.690 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file97.yaml
-19:11:51.691 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-15413819527590098993/file97.yaml
-19:11:51.691 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file97.yaml
-19:11:51.691 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file98.yaml
-19:11:51.691 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-15413819527590098993/file97.yaml
-19:11:51.692 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file98.yaml
-19:11:51.692 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-15413819527590098993/file98.yaml
-19:11:51.692 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file99.yaml
-19:11:51.692 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-15413819527590098993/file98.yaml
-19:11:51.692 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file99.yaml
-19:11:51.692 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-15413819527590098993/file99.yaml
-19:11:51.692 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-15413819527590098993/file99.yaml
-19:11:52.155 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Stopping filesystem watcher
-19:11:52.156 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Watch loop interrupted
-19:11:52.156 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Watch loop exited
-19:11:52.160 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Filesystem watcher stopped
+    <system-out><![CDATA[17:53:54.018 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Starting filesystem watcher on directory: /tmp/junit-325564428077199755
+17:53:54.019 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Filesystem watcher started successfully
+17:53:54.020 [main] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Scanning for existing descriptor files
+17:53:54.020 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Watch loop started
+17:53:54.023 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file0.yaml
+17:53:54.024 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file0.yaml
+17:53:54.024 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-325564428077199755/file0.yaml
+17:53:54.024 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-325564428077199755/file0.yaml
+17:53:54.024 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file1.yaml
+17:53:54.025 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-325564428077199755/file1.yaml
+17:53:54.025 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file1.yaml
+17:53:54.025 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file2.yaml
+17:53:54.025 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-325564428077199755/file1.yaml
+17:53:54.026 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-325564428077199755/file2.yaml
+17:53:54.026 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file2.yaml
+17:53:54.026 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-325564428077199755/file2.yaml
+17:53:54.026 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file3.yaml
+17:53:54.026 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-325564428077199755/file3.yaml
+17:53:54.026 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file3.yaml
+17:53:54.027 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-325564428077199755/file3.yaml
+17:53:54.027 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file4.yaml
+17:53:54.027 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file4.yaml
+17:53:54.027 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-325564428077199755/file4.yaml
+17:53:54.027 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file5.yaml
+17:53:54.027 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-325564428077199755/file4.yaml
+17:53:54.027 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file5.yaml
+17:53:54.027 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-325564428077199755/file5.yaml
+17:53:54.028 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file6.yaml
+17:53:54.028 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-325564428077199755/file5.yaml
+17:53:54.028 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file6.yaml
+17:53:54.028 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-325564428077199755/file6.yaml
+17:53:54.028 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file7.yaml
+17:53:54.028 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-325564428077199755/file6.yaml
+17:53:54.028 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-325564428077199755/file7.yaml
+17:53:54.028 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file7.yaml
+17:53:54.028 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file8.yaml
+17:53:54.028 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-325564428077199755/file7.yaml
+17:53:54.029 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file8.yaml
+17:53:54.029 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-325564428077199755/file8.yaml
+17:53:54.029 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file9.yaml
+17:53:54.029 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-325564428077199755/file8.yaml
+17:53:54.029 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file9.yaml
+17:53:54.029 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-325564428077199755/file9.yaml
+17:53:54.029 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file10.yaml
+17:53:54.029 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-325564428077199755/file9.yaml
+17:53:54.029 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-325564428077199755/file10.yaml
+17:53:54.029 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file10.yaml
+17:53:54.030 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file11.yaml
+17:53:54.030 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-325564428077199755/file10.yaml
+17:53:54.030 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file11.yaml
+17:53:54.030 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-325564428077199755/file11.yaml
+17:53:54.030 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file12.yaml
+17:53:54.030 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-325564428077199755/file11.yaml
+17:53:54.030 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file12.yaml
+17:53:54.030 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-325564428077199755/file12.yaml
+17:53:54.030 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file13.yaml
+17:53:54.030 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-325564428077199755/file12.yaml
+17:53:54.031 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-325564428077199755/file13.yaml
+17:53:54.031 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file13.yaml
+17:53:54.031 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-325564428077199755/file13.yaml
+17:53:54.031 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file14.yaml
+17:53:54.031 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-325564428077199755/file14.yaml
+17:53:54.031 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file14.yaml
+17:53:54.031 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-325564428077199755/file14.yaml
+17:53:54.031 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file15.yaml
+17:53:54.032 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-325564428077199755/file15.yaml
+17:53:54.032 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file15.yaml
+17:53:54.032 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file16.yaml
+17:53:54.032 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-325564428077199755/file15.yaml
+17:53:54.033 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-325564428077199755/file16.yaml
+17:53:54.033 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file16.yaml
+17:53:54.033 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file17.yaml
+17:53:54.033 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-325564428077199755/file16.yaml
+17:53:54.033 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file17.yaml
+17:53:54.033 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-325564428077199755/file17.yaml
+17:53:54.033 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-325564428077199755/file17.yaml
+17:53:54.033 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file18.yaml
+17:53:54.034 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file18.yaml
+17:53:54.034 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-325564428077199755/file18.yaml
+17:53:54.034 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-325564428077199755/file18.yaml
+17:53:54.034 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file19.yaml
+17:53:54.035 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-325564428077199755/file19.yaml
+17:53:54.035 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file19.yaml
+17:53:54.035 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file20.yaml
+17:53:54.035 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-325564428077199755/file19.yaml
+17:53:54.035 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-325564428077199755/file20.yaml
+17:53:54.035 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file20.yaml
+17:53:54.036 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-325564428077199755/file20.yaml
+17:53:54.036 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file21.yaml
+17:53:54.036 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-325564428077199755/file21.yaml
+17:53:54.036 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file21.yaml
+17:53:54.036 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file22.yaml
+17:53:54.037 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file22.yaml
+17:53:54.037 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-325564428077199755/file21.yaml
+17:53:54.037 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file23.yaml
+17:53:54.037 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-325564428077199755/file22.yaml
+17:53:54.037 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-325564428077199755/file22.yaml
+17:53:54.037 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file23.yaml
+17:53:54.037 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-325564428077199755/file23.yaml
+17:53:54.037 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file24.yaml
+17:53:54.037 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-325564428077199755/file23.yaml
+17:53:54.038 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file24.yaml
+17:53:54.038 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-325564428077199755/file24.yaml
+17:53:54.039 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file25.yaml
+17:53:54.039 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-325564428077199755/file24.yaml
+17:53:54.039 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file25.yaml
+17:53:54.039 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-325564428077199755/file25.yaml
+17:53:54.039 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file26.yaml
+17:53:54.040 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file26.yaml
+17:53:54.040 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-325564428077199755/file26.yaml
+17:53:54.040 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-325564428077199755/file26.yaml
+17:53:54.040 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-325564428077199755/file25.yaml
+17:53:54.040 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file27.yaml
+17:53:54.040 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file27.yaml
+17:53:54.040 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-325564428077199755/file27.yaml
+17:53:54.041 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file28.yaml
+17:53:54.041 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-325564428077199755/file27.yaml
+17:53:54.041 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file28.yaml
+17:53:54.041 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-325564428077199755/file28.yaml
+17:53:54.041 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file29.yaml
+17:53:54.041 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-325564428077199755/file28.yaml
+17:53:54.042 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file29.yaml
+17:53:54.042 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-325564428077199755/file29.yaml
+17:53:54.042 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-325564428077199755/file29.yaml
+17:53:54.042 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file30.yaml
+17:53:54.042 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file30.yaml
+17:53:54.042 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-325564428077199755/file30.yaml
+17:53:54.042 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file31.yaml
+17:53:54.042 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-325564428077199755/file30.yaml
+17:53:54.043 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-325564428077199755/file31.yaml
+17:53:54.043 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file31.yaml
+17:53:54.043 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file32.yaml
+17:53:54.043 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-325564428077199755/file31.yaml
+17:53:54.043 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file32.yaml
+17:53:54.043 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-325564428077199755/file32.yaml
+17:53:54.043 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file33.yaml
+17:53:54.043 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file33.yaml
+17:53:54.044 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file34.yaml
+17:53:54.043 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-325564428077199755/file32.yaml
+17:53:54.043 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-325564428077199755/file33.yaml
+17:53:54.044 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-325564428077199755/file33.yaml
+17:53:54.044 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file34.yaml
+17:53:54.044 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-325564428077199755/file34.yaml
+17:53:54.045 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-325564428077199755/file34.yaml
+17:53:54.045 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file35.yaml
+17:53:54.045 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file35.yaml
+17:53:54.045 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-325564428077199755/file35.yaml
+17:53:54.045 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file36.yaml
+17:53:54.045 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-325564428077199755/file35.yaml
+17:53:54.045 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file36.yaml
+17:53:54.045 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file37.yaml
+17:53:54.045 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file37.yaml
+17:53:54.045 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-325564428077199755/file36.yaml
+17:53:54.045 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-325564428077199755/file36.yaml
+17:53:54.046 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file38.yaml
+17:53:54.046 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-325564428077199755/file37.yaml
+17:53:54.046 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file38.yaml
+17:53:54.046 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-325564428077199755/file38.yaml
+17:53:54.046 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file39.yaml
+17:53:54.047 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-325564428077199755/file38.yaml
+17:53:54.047 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file39.yaml
+17:53:54.047 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-325564428077199755/file39.yaml
+17:53:54.047 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file40.yaml
+17:53:54.047 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-325564428077199755/file39.yaml
+17:53:54.047 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file40.yaml
+17:53:54.047 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-325564428077199755/file40.yaml
+17:53:54.047 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file41.yaml
+17:53:54.047 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-325564428077199755/file40.yaml
+17:53:54.047 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file41.yaml
+17:53:54.047 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-325564428077199755/file41.yaml
+17:53:54.047 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file42.yaml
+17:53:54.047 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file42.yaml
+17:53:54.047 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-325564428077199755/file41.yaml
+17:53:54.047 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-325564428077199755/file42.yaml
+17:53:54.048 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file43.yaml
+17:53:54.048 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-325564428077199755/file42.yaml
+17:53:54.048 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file43.yaml
+17:53:54.048 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-325564428077199755/file43.yaml
+17:53:54.048 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file44.yaml
+17:53:54.048 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-325564428077199755/file43.yaml
+17:53:54.048 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file44.yaml
+17:53:54.048 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-325564428077199755/file44.yaml
+17:53:54.048 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file45.yaml
+17:53:54.048 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-325564428077199755/file44.yaml
+17:53:54.048 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file45.yaml
+17:53:54.048 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-325564428077199755/file45.yaml
+17:53:54.049 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-325564428077199755/file45.yaml
+17:53:54.049 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file46.yaml
+17:53:54.049 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-325564428077199755/file46.yaml
+17:53:54.049 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file46.yaml
+17:53:54.049 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file47.yaml
+17:53:54.049 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-325564428077199755/file46.yaml
+17:53:54.049 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-325564428077199755/file47.yaml
+17:53:54.049 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file47.yaml
+17:53:54.049 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file48.yaml
+17:53:54.049 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file48.yaml
+17:53:54.049 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-325564428077199755/file47.yaml
+17:53:54.050 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file49.yaml
+17:53:54.049 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-325564428077199755/file48.yaml
+17:53:54.050 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-325564428077199755/file48.yaml
+17:53:54.050 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-325564428077199755/file49.yaml
+17:53:54.050 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file49.yaml
+17:53:54.050 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file50.yaml
+17:53:54.050 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file50.yaml
+17:53:54.050 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-325564428077199755/file49.yaml
+17:53:54.050 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-325564428077199755/file50.yaml
+17:53:54.050 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file51.yaml
+17:53:54.050 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-325564428077199755/file50.yaml
+17:53:54.050 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-325564428077199755/file51.yaml
+17:53:54.050 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file51.yaml
+17:53:54.051 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file52.yaml
+17:53:54.051 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-325564428077199755/file51.yaml
+17:53:54.051 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file52.yaml
+17:53:54.051 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-325564428077199755/file52.yaml
+17:53:54.051 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file53.yaml
+17:53:54.051 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-325564428077199755/file52.yaml
+17:53:54.051 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file53.yaml
+17:53:54.051 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-325564428077199755/file53.yaml
+17:53:54.052 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file54.yaml
+17:53:54.052 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-325564428077199755/file53.yaml
+17:53:54.052 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file54.yaml
+17:53:54.052 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-325564428077199755/file54.yaml
+17:53:54.052 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file55.yaml
+17:53:54.052 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file55.yaml
+17:53:54.052 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-325564428077199755/file54.yaml
+17:53:54.052 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-325564428077199755/file55.yaml
+17:53:54.052 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file56.yaml
+17:53:54.052 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-325564428077199755/file55.yaml
+17:53:54.052 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file56.yaml
+17:53:54.052 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-325564428077199755/file56.yaml
+17:53:54.052 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file57.yaml
+17:53:54.052 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-325564428077199755/file56.yaml
+17:53:54.052 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file57.yaml
+17:53:54.052 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-325564428077199755/file57.yaml
+17:53:54.053 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file58.yaml
+17:53:54.053 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-325564428077199755/file57.yaml
+17:53:54.053 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file58.yaml
+17:53:54.053 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-325564428077199755/file58.yaml
+17:53:54.053 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file59.yaml
+17:53:54.053 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-325564428077199755/file58.yaml
+17:53:54.053 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-325564428077199755/file59.yaml
+17:53:54.053 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file59.yaml
+17:53:54.053 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-325564428077199755/file59.yaml
+17:53:54.053 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file60.yaml
+17:53:54.053 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file60.yaml
+17:53:54.053 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-325564428077199755/file60.yaml
+17:53:54.053 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file61.yaml
+17:53:54.053 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-325564428077199755/file60.yaml
+17:53:54.054 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file61.yaml
+17:53:54.054 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-325564428077199755/file61.yaml
+17:53:54.054 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-325564428077199755/file61.yaml
+17:53:54.054 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file62.yaml
+17:53:54.054 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-325564428077199755/file62.yaml
+17:53:54.054 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file62.yaml
+17:53:54.054 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file63.yaml
+17:53:54.054 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-325564428077199755/file62.yaml
+17:53:54.054 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file63.yaml
+17:53:54.054 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-325564428077199755/file63.yaml
+17:53:54.054 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file64.yaml
+17:53:54.054 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-325564428077199755/file63.yaml
+17:53:54.055 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file64.yaml
+17:53:54.055 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-325564428077199755/file64.yaml
+17:53:54.055 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file65.yaml
+17:53:54.055 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-325564428077199755/file64.yaml
+17:53:54.055 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file65.yaml
+17:53:54.055 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-325564428077199755/file65.yaml
+17:53:54.055 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file66.yaml
+17:53:54.055 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-325564428077199755/file65.yaml
+17:53:54.055 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file66.yaml
+17:53:54.055 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-325564428077199755/file66.yaml
+17:53:54.055 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file67.yaml
+17:53:54.055 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-325564428077199755/file66.yaml
+17:53:54.055 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file67.yaml
+17:53:54.055 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-325564428077199755/file67.yaml
+17:53:54.055 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-325564428077199755/file67.yaml
+17:53:54.055 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file68.yaml
+17:53:54.056 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-325564428077199755/file68.yaml
+17:53:54.056 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file68.yaml
+17:53:54.056 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-325564428077199755/file68.yaml
+17:53:54.056 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file69.yaml
+17:53:54.057 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-325564428077199755/file69.yaml
+17:53:54.057 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file69.yaml
+17:53:54.057 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-325564428077199755/file69.yaml
+17:53:54.057 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file70.yaml
+17:53:54.057 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file70.yaml
+17:53:54.057 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-325564428077199755/file70.yaml
+17:53:54.057 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-325564428077199755/file70.yaml
+17:53:54.057 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file71.yaml
+17:53:54.058 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-325564428077199755/file71.yaml
+17:53:54.058 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file71.yaml
+17:53:54.058 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-325564428077199755/file71.yaml
+17:53:54.058 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file72.yaml
+17:53:54.058 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-325564428077199755/file72.yaml
+17:53:54.058 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file72.yaml
+17:53:54.058 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file73.yaml
+17:53:54.058 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-325564428077199755/file72.yaml
+17:53:54.058 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file73.yaml
+17:53:54.058 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-325564428077199755/file73.yaml
+17:53:54.058 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file74.yaml
+17:53:54.058 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-325564428077199755/file73.yaml
+17:53:54.059 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-325564428077199755/file74.yaml
+17:53:54.059 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file74.yaml
+17:53:54.059 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-325564428077199755/file74.yaml
+17:53:54.059 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file75.yaml
+17:53:54.059 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file75.yaml
+17:53:54.059 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-325564428077199755/file75.yaml
+17:53:54.059 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file76.yaml
+17:53:54.059 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-325564428077199755/file75.yaml
+17:53:54.059 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file76.yaml
+17:53:54.059 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-325564428077199755/file76.yaml
+17:53:54.059 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file77.yaml
+17:53:54.059 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-325564428077199755/file76.yaml
+17:53:54.059 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file77.yaml
+17:53:54.059 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-325564428077199755/file77.yaml
+17:53:54.060 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file78.yaml
+17:53:54.060 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-325564428077199755/file77.yaml
+17:53:54.060 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file78.yaml
+17:53:54.060 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-325564428077199755/file78.yaml
+17:53:54.060 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file79.yaml
+17:53:54.060 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-325564428077199755/file78.yaml
+17:53:54.060 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file79.yaml
+17:53:54.060 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-325564428077199755/file79.yaml
+17:53:54.060 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file80.yaml
+17:53:54.060 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-325564428077199755/file79.yaml
+17:53:54.060 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file80.yaml
+17:53:54.060 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-325564428077199755/file80.yaml
+17:53:54.060 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file81.yaml
+17:53:54.060 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-325564428077199755/file80.yaml
+17:53:54.060 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-325564428077199755/file81.yaml
+17:53:54.060 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file81.yaml
+17:53:54.061 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file82.yaml
+17:53:54.061 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-325564428077199755/file81.yaml
+17:53:54.061 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file82.yaml
+17:53:54.061 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-325564428077199755/file82.yaml
+17:53:54.061 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file83.yaml
+17:53:54.061 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-325564428077199755/file82.yaml
+17:53:54.061 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-325564428077199755/file83.yaml
+17:53:54.061 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file83.yaml
+17:53:54.061 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file84.yaml
+17:53:54.062 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-325564428077199755/file83.yaml
+17:53:54.062 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-325564428077199755/file84.yaml
+17:53:54.062 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file84.yaml
+17:53:54.062 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file85.yaml
+17:53:54.062 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-325564428077199755/file84.yaml
+17:53:54.062 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-325564428077199755/file85.yaml
+17:53:54.062 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file85.yaml
+17:53:54.062 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file86.yaml
+17:53:54.062 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-325564428077199755/file85.yaml
+17:53:54.062 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file86.yaml
+17:53:54.062 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-325564428077199755/file86.yaml
+17:53:54.062 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file87.yaml
+17:53:54.062 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-325564428077199755/file86.yaml
+17:53:54.063 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file87.yaml
+17:53:54.063 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-325564428077199755/file87.yaml
+17:53:54.063 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file88.yaml
+17:53:54.063 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-325564428077199755/file87.yaml
+17:53:54.063 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file88.yaml
+17:53:54.063 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-325564428077199755/file88.yaml
+17:53:54.063 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file89.yaml
+17:53:54.063 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-325564428077199755/file88.yaml
+17:53:54.063 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file89.yaml
+17:53:54.063 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-325564428077199755/file89.yaml
+17:53:54.063 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-325564428077199755/file89.yaml
+17:53:54.063 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file90.yaml
+17:53:54.064 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file90.yaml
+17:53:54.064 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-325564428077199755/file90.yaml
+17:53:54.064 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file91.yaml
+17:53:54.064 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-325564428077199755/file90.yaml
+17:53:54.064 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-325564428077199755/file91.yaml
+17:53:54.064 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file91.yaml
+17:53:54.064 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file92.yaml
+17:53:54.064 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-325564428077199755/file91.yaml
+17:53:54.064 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file92.yaml
+17:53:54.064 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-325564428077199755/file92.yaml
+17:53:54.065 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-325564428077199755/file92.yaml
+17:53:54.065 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file93.yaml
+17:53:54.065 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file93.yaml
+17:53:54.065 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-325564428077199755/file93.yaml
+17:53:54.065 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file94.yaml
+17:53:54.065 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-325564428077199755/file93.yaml
+17:53:54.065 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file94.yaml
+17:53:54.065 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-325564428077199755/file94.yaml
+17:53:54.065 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file95.yaml
+17:53:54.065 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-325564428077199755/file94.yaml
+17:53:54.065 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file95.yaml
+17:53:54.065 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-325564428077199755/file95.yaml
+17:53:54.066 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file96.yaml
+17:53:54.066 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-325564428077199755/file95.yaml
+17:53:54.066 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file96.yaml
+17:53:54.066 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-325564428077199755/file96.yaml
+17:53:54.066 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file97.yaml
+17:53:54.066 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-325564428077199755/file96.yaml
+17:53:54.066 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file97.yaml
+17:53:54.066 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-325564428077199755/file97.yaml
+17:53:54.066 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file98.yaml
+17:53:54.066 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-325564428077199755/file97.yaml
+17:53:54.067 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file98.yaml
+17:53:54.067 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-325564428077199755/file98.yaml
+17:53:54.067 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: file99.yaml
+17:53:54.067 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-325564428077199755/file98.yaml
+17:53:54.067 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-325564428077199755/file99.yaml
+17:53:54.067 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: file99.yaml
+17:53:54.068 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-325564428077199755/file99.yaml
+17:53:54.537 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Stopping filesystem watcher
+17:53:54.538 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Watch loop interrupted
+17:53:54.538 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Watch loop exited
+17:53:54.538 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Filesystem watcher stopped
 ]]></system-out>
   </testcase>
-  <testcase name="testNullWatchKey" classname="org.flossware.jfswatcher.FileSystemDeploymentWatcherEdgeCasesTest" time="3.011">
-    <system-out><![CDATA[19:11:52.170 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Starting filesystem watcher on directory: /tmp/junit-14095712157737444494
-19:11:52.171 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Filesystem watcher started successfully
-19:11:52.172 [main] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Scanning for existing descriptor files
-19:11:52.172 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Watch loop started
-19:11:54.673 [main] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Added deployment listener: org.flossware.jfswatcher.FileSystemDeploymentWatcherEdgeCasesTest$6
-19:11:54.674 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: test.yaml
-19:11:54.675 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: test.yaml
-19:11:55.175 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-14095712157737444494/test.yaml
-19:11:55.176 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Stopping filesystem watcher
-19:11:55.177 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Watch loop interrupted
-19:11:55.178 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Watch loop exited
-19:11:55.179 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Filesystem watcher stopped
+  <testcase name="testNullWatchKey" classname="org.flossware.jfswatcher.FileSystemDeploymentWatcherEdgeCasesTest" time="3.01">
+    <system-out><![CDATA[17:53:54.549 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Starting filesystem watcher on directory: /tmp/junit-11115847462683184367
+17:53:54.550 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Filesystem watcher started successfully
+17:53:54.550 [main] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Scanning for existing descriptor files
+17:53:54.550 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Watch loop started
+17:53:57.051 [main] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Added deployment listener: org.flossware.jfswatcher.FileSystemDeploymentWatcherEdgeCasesTest$6
+17:53:57.052 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_CREATE event for: test.yaml
+17:53:57.053 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_MODIFY event for: test.yaml
+17:53:57.553 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor modified - /tmp/junit-11115847462683184367/test.yaml
+17:53:57.554 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Stopping filesystem watcher
+17:53:57.555 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Watch loop interrupted
+17:53:57.555 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Watch loop exited
+17:53:57.556 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Filesystem watcher stopped
 ]]></system-out>
   </testcase>
-  <testcase name="testDescriptorRemovedListenerException" classname="org.flossware.jfswatcher.FileSystemDeploymentWatcherEdgeCasesTest" time="1.011">
-    <system-out><![CDATA[19:11:55.185 [main] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Added deployment listener: org.flossware.jfswatcher.FileSystemDeploymentWatcherEdgeCasesTest$3
-19:11:55.185 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Starting filesystem watcher on directory: /tmp/junit-7091446956792849843
-19:11:55.186 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Filesystem watcher started successfully
-19:11:55.186 [main] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Scanning for existing descriptor files
-19:11:55.186 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Watch loop started
-19:11:55.187 [main] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Found existing descriptor: /tmp/junit-7091446956792849843/app.yaml
-19:11:55.687 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-7091446956792849843/app.yaml
-19:11:55.688 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_DELETE event for: app.yaml
-19:11:56.189 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor removed - /tmp/junit-7091446956792849843/app.yaml
-19:11:56.189 [fs-watcher-debounce] ERROR org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Listener threw exception on descriptor removed
+  <testcase name="testDescriptorRemovedListenerException" classname="org.flossware.jfswatcher.FileSystemDeploymentWatcherEdgeCasesTest" time="1.014">
+    <system-out><![CDATA[17:53:57.561 [main] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Added deployment listener: org.flossware.jfswatcher.FileSystemDeploymentWatcherEdgeCasesTest$3
+17:53:57.561 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Starting filesystem watcher on directory: /tmp/junit-4614598724939787144
+17:53:57.562 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Filesystem watcher started successfully
+17:53:57.562 [main] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Scanning for existing descriptor files
+17:53:57.562 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Watch loop started
+17:53:57.562 [main] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Found existing descriptor: /tmp/junit-4614598724939787144/app.yaml
+17:53:58.063 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor detected - /tmp/junit-4614598724939787144/app.yaml
+17:53:58.063 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Detected ENTRY_DELETE event for: app.yaml
+17:53:58.564 [fs-watcher-debounce] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Notifying listeners: descriptor removed - /tmp/junit-4614598724939787144/app.yaml
+17:53:58.564 [fs-watcher-debounce] ERROR org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Listener threw exception on descriptor removed
 java.lang.RuntimeException: Test exception in onDescriptorRemoved
 	at org.flossware.jfswatcher.FileSystemDeploymentWatcherEdgeCasesTest$3.onDescriptorRemoved(FileSystemDeploymentWatcherEdgeCasesTest.java:158)
 	at org.flossware.jfswatcher.FileSystemDeploymentWatcher.notifyDescriptorRemoved(FileSystemDeploymentWatcher.java:371)
@@ -577,10 +576,10 @@ java.lang.RuntimeException: Test exception in onDescriptorRemoved
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
 	at java.base/java.lang.Thread.run(Thread.java:1583)
-19:11:56.191 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Stopping filesystem watcher
-19:11:56.191 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Watch loop interrupted
-19:11:56.191 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Watch loop exited
-19:11:56.192 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Filesystem watcher stopped
+17:53:58.565 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Stopping filesystem watcher
+17:53:58.566 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Watch loop interrupted
+17:53:58.566 [fs-watcher] DEBUG org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Watch loop exited
+17:53:58.571 [main] INFO org.flossware.jfswatcher.FileSystemDeploymentWatcher -- Filesystem watcher stopped
 ]]></system-out>
   </testcase>
 </testsuite>

@@ -1,8 +1,8 @@
-package org.flossware.jfswatcher;
+package org.flossware.fswatcher;
 
-import org.flossware.jfswatcher.DeploymentEventListener;
-import org.flossware.jfswatcher.DeploymentWatcher;
-import org.flossware.jfswatcher.WatcherConfig;
+import org.flossware.fswatcher.DeploymentEventListener;
+import org.flossware.fswatcher.DeploymentWatcher;
+import org.flossware.fswatcher.WatcherConfig;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

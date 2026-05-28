@@ -1,4 +1,4 @@
-package org.flossware.jfswatcher;
+package org.flossware.fswatcher;
 
 /**
  * Watches a directory for application descriptor files and triggers deployment events.
