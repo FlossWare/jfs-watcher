@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.flossware</groupId>
     <artifactId>jfs-watcher</artifactId>
-    <version>1.1</version>
+    <version>1.2</version>
     <packaging>jar</packaging>
     <name>JFS Watcher</name>
     <description>Filesystem watcher for monitoring directory changes with debouncing</description>
